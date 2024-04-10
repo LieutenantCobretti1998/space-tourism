@@ -1,0 +1,153 @@
+main {
+  position: relative;
+}
+
+.active-destination {
+  pointer-events: none;
+  cursor: default;
+  --underline-width: (0, 6rem);
+  &::after {
+    content: "";
+    opacity: 1 !important;
+    display: block;
+    width: var(--underline-width) !important;
+    height: .3rem !important;;
+    background-color : $color-white;
+    margin-top: 0.5rem;
+  }
+}
+
+.pick_destination {
+  display: inline-block;
+  position: absolute;
+  top: 12.2rem;
+  left: 18.65rem;
+  font-family: $barlow-condensed;
+  font-size: 2.8rem;
+  color: $color-white;
+  text-transform: uppercase;
+  word-spacing: 1.5rem;
+
+  >b {
+    opacity: 25%;
+  }
+}
+
+.destination {
+  position: absolute;
+  display: flex;
+  top: 20rem;
+  left: 18rem;
+  gap: 20rem;
+
+  &__description {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    overflow: hidden;
+    align-self: flex-start;
+    font-size: 10rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: $belleFair;
+    text-align: left;
+    letter-spacing: .1rem;
+  }
+
+  &__text {
+    overflow: hidden;
+    width: 44.4rem;
+    font-size: 1.8rem;
+    color: $light-purple;
+    font-family: $barlow-condensed;
+    text-align: left;
+    line-height: 3.2rem;
+
+  }
+
+  &__line {
+    width: 42.4rem;
+    height: .1rem;
+    background-color: $color-black-2;
+    margin-top: 2.5rem;
+  }
+
+  &__image > img {
+    width: 44.5rem;
+    height: 44.5rem;
+  }
+
+  &__places > ul {
+    display: flex;
+    list-style: none;
+
+    > li {
+      width: 5.6rem;
+      height: 1.9rem;
+      font-size: 1.6rem;
+      font-family: $barlow-condensed;
+      text-transform: uppercase;
+      transition: color 0.3s .1s ease-in-out;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: .3rem;
+        background-color: $color-white;
+        margin-top: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease, width 0.3s ease;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $transition-color-brown;
+
+        &::after {
+          opacity: 1;
+          width: 4.8rem;
+        }
+      }
+    }
+
+    > li:not(:last-child) {
+      margin-right: 2rem;
+    }
+    > li:nth-child(4) {
+      margin-left: 2rem;
+    }
+  }
+
+
+  &__characteristics {
+    overflow: hidden;
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 16rem;
+
+    &_distance,
+    &_travelTime{
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      > p {
+        letter-spacing: .236rem;
+        font-size: 1.4rem;
+        font-family: $barlow-condensed;
+      }
+
+      > strong {
+        font-size: 2.8rem;
+        text-align: left;
+        font-family: $belleFair;
+      }
+
+    }
+  }
+}

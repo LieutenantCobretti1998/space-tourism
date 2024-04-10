@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  //background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/tracks/tracks-html-background-image.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: normal;
+  color: $color-white;
+  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

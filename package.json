@@ -1,0 +1,43 @@
+{
+  "devDependencies": {
+    "sass": "^1.72.0"
+  },
+  "name": "space-tourism-website-main",
+  "description": "![Design preview for the Space tourism website coding challenge](./preview.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "anymatch": "^3.1.3",
+    "binary-extensions": "^2.3.0",
+    "braces": "^3.0.2",
+    "chokidar": "^3.6.0",
+    "fill-range": "^7.0.1",
+    "glob-parent": "^5.1.2",
+    "immutable": "^4.3.5",
+    "is-binary-path": "^2.1.0",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "normalize-path": "^3.0.0",
+    "picomatch": "^2.3.1",
+    "readdirp": "^3.6.0",
+    "source-map-js": "^1.2.0",
+    "to-regex-range": "^5.0.1"
+  },
+  "scripts": {
+    "watch:sass": "node-sass starter-code/sass/home.scss starter-code/css/home.css -w",
+    "watch:sassDestinations": "node-sass starter-code/sass/destination.scss starter-code/css/destinations.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/home.scss css/style.comp.css",
+    "compile:sass:home": "node-sass sass/home.scss css/home.css",
+    "compile:sass:destination": "node-sass sass/destination.scss css/destinations.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass:home compile:sass:destination concat:css prefix:css compress:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
