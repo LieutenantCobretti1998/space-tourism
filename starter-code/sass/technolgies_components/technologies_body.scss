@@ -1,0 +1,80 @@
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.space_launch_header {
+  display: inline-block;
+  //position: absolute;
+  transform: translate(10rem, 15.5rem);
+  top: 12.2rem;
+  left: 18.65rem;
+  font-family: $barlow-condensed;
+  font-weight: normal;
+  font-size: 2.8rem;
+  color: $color-white;
+  text-transform: uppercase;
+  word-spacing: 1.2rem;
+
+  >b {
+    opacity: 25%;
+  }
+}
+
+.technologies_container {
+  margin-left: 10rem;
+  padding-top: 5.5rem;
+  display: flex;
+  gap: 10rem;
+
+  &__numbers {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    &__number {
+      font-size: 3.2rem;
+      font-family: $belleFair;
+      letter-spacing: .2rem;
+      color: $color-white;
+    }
+  }
+
+  &__description {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__terminology {
+      font-size: 1.6rem;
+      font-family: $barlow-condensed;
+      text-transform: uppercase;
+      letter-spacing: .27rem;
+      color: $light-purple;
+    }
+
+    &__name {
+      font-size: 5.6rem;
+      font-family: $belleFair;
+      letter-spacing: 0;
+      color: $color-white;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+      font-family: $barlow-condensed;
+      color: $light-purple;
+      line-height: 3.2rem;
+      letter-spacing: 0;
+
+    }
+
+    &__image {
+      transform: translateY(-7%);
+    }
+  }
+}

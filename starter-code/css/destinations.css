@@ -87,6 +87,7 @@ body {
           font-weight: bold; }
 
 body {
+  object-fit: cover;
   background-image: url("../assets/destination/background-destination-desktop.jpg"); }
 
 main {
