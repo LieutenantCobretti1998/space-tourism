@@ -9,8 +9,12 @@ export default class TreeCreator {
     #destination_text_name_element
     #time_element
     #image_element
-    constructor(name, image, text, distance, travel_time) {
+    #technologies_name_element
+    #technologies_image_element
+    #technologies_text_element
+    constructor(type="", index= 0, name = '', image = '', text = '', distance = '', travel_time = '') {
         this.#destination_name = name;
+        this.index = index;
         this.#destination_image = image;
         this.#destination_text = text;
         this.#distance = distance;
@@ -20,10 +24,17 @@ export default class TreeCreator {
         this.#destination_text_name_element = document.querySelector(".destination__text");
         this.#time_element =  document.querySelector(".destination__characteristics_travelTime strong");
         this.#image_element = document.querySelector(".destination__image img");
-        this.updateDomTree();
+        switch (type) {
+            case "destinations":
+                this.updateDomTreeDestinations();
+                break
+            case "technologies":
+                this.updateDomTreeTechnologies();
+                break
+        }
     }
 
-    updateDomTree() {
+    updateDomTreeDestinations() {
         
         // create the size of the underline and choose proper destination name
         document.querySelectorAll(".destination__places_place").forEach(element => {
@@ -94,6 +105,26 @@ export default class TreeCreator {
         this.#destination_name_element.addEventListener("animationend", handle_animation_end);
         this.#time_element.addEventListener("animationend", handle_animation_end);
         this.#destination_text_name_element.addEventListener("animationend", handle_animation_end);
+    };
+
+    updateDomTreeTechnologies() {
+
+        document.querySelectorAll(".technologies_container__numbers__number").forEach(element => {
+            let number = this.index + 1;
+            if (number === Number(element.textContent)) {
+                element.classList.add("filled");
+            }
+        });
+
+        this.#technologies_name_element = document.querySelector(".technologies_container__description__name");
+        this.#technologies_name_element.textContent = this.#destination_name;
+
+        this.#technologies_image_element = document.querySelector(".technologies_container__image img");
+        this.#technologies_image_element.src = this.#destination_image;
+        this.#technologies_image_element.alt = this.#destination_name;
+
+        this.#technologies_text_element = document.querySelector(".technologies_container__description__text");
+        this.#technologies_text_element.textContent = this.#destination_text;
     }
 }
 
