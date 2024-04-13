@@ -24,6 +24,7 @@ main {
 }
 
 .technologies_container {
+  overflow: hidden;
   margin-left: 10rem;
   padding-top: 5.5rem;
   display: flex;
@@ -53,7 +54,7 @@ main {
 
       &:hover {
         cursor: pointer;
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
