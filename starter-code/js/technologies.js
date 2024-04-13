@@ -1,4 +1,19 @@
 import PageHandler from "./init.js";
+import anime from "../../node_modules/animejs/lib/anime.es.js";
+
+// Main animation init
+
+document.addEventListener("DOMContentLoaded", () => {
+    anime({
+        targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
+        keyframes: [
+            { translateY: [75, 0], opacity: [0, 1] }
+        ],
+        duration: 2000,
+        easing: "easeOutElastic(1, .8)"
+    });
+})
+
 
 // Main Initialization of data fetching for technologies
 const technologies_numbers_element = document.querySelector(".technologies_container__numbers");

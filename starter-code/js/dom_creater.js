@@ -1,3 +1,4 @@
+import anime from "../../node_modules/animejs/lib/anime.es.js";
 export default class TreeCreator {
     #destination_name
     #destination_image
@@ -12,25 +13,24 @@ export default class TreeCreator {
     #technologies_name_element
     #technologies_image_element
     #technologies_text_element
-    constructor(type="", index= 0, name = '', image = '', text = '', distance = '', travel_time = '') {
-        this.#destination_name = name;
-        this.index = index;
-        this.#destination_image = image;
-        this.#destination_text = text;
-        this.#distance = distance;
-        this.#travel_time = travel_time;
+    constructor(options = {}) {
+        this.#destination_name = options.name || '';
+        this.#destination_image = options.image || '';
+        this.#destination_text = options.text || '';
+        this.#distance = options.distance || '';
+        this.#travel_time = options.travel_time || '';
+        this.index = options.index || 0;
+
         this.#destination_name_element = document.querySelector(".destination__name");
         this.#distance_element = document.querySelector(".destination__characteristics_distance strong");
         this.#destination_text_name_element = document.querySelector(".destination__text");
         this.#time_element =  document.querySelector(".destination__characteristics_travelTime strong");
         this.#image_element = document.querySelector(".destination__image img");
-        switch (type) {
-            case "destinations":
-                this.updateDomTreeDestinations();
-                break
-            case "technologies":
-                this.updateDomTreeTechnologies();
-                break
+
+        if (options.type === "destinations") {
+            this.updateDomTreeDestinations();
+        } else if (options.type === "technologies") {
+            this.updateDomTreeTechnologies();
         }
     }
 
@@ -109,6 +109,37 @@ export default class TreeCreator {
 
     updateDomTreeTechnologies() {
 
+        anime({
+            targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
+            keyframes: [
+                { translateY: -75, opacity: [1, 0] }
+            ],
+            duration: 2000,
+            easing: "easeOutElastic(1, .8)",
+            complete: () => {
+                console.log(this.#destination_name);
+                this.#technologies_name_element = document.querySelector(".technologies_container__description__name");
+                this.#technologies_name_element.textContent = this.#destination_name;
+
+                this.#technologies_image_element = document.querySelector(".technologies_container__image img");
+                this.#technologies_image_element.src = this.#destination_image;
+                this.#technologies_image_element.alt = this.#destination_name;
+
+                this.#technologies_text_element = document.querySelector(".technologies_container__description__text");
+                this.#technologies_text_element.textContent = this.#destination_text;
+
+                // Ensure elements are ready for the next animation
+                anime({
+                    targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
+                    keyframes: [
+                        { translateY: [75, 0], opacity: [0, 1] }
+                    ],
+                    duration: 2000,
+                    easing: "easeOutElastic(1, .8)"
+                });
+            }
+        });
+
         document.querySelectorAll(".technologies_container__numbers__number").forEach(element => {
             let number = this.index + 1;
             if (number === Number(element.textContent)) {
@@ -116,15 +147,6 @@ export default class TreeCreator {
             }
         });
 
-        this.#technologies_name_element = document.querySelector(".technologies_container__description__name");
-        this.#technologies_name_element.textContent = this.#destination_name;
-
-        this.#technologies_image_element = document.querySelector(".technologies_container__image img");
-        this.#technologies_image_element.src = this.#destination_image;
-        this.#technologies_image_element.alt = this.#destination_name;
-
-        this.#technologies_text_element = document.querySelector(".technologies_container__description__text");
-        this.#technologies_text_element.textContent = this.#destination_text;
     }
 }
 

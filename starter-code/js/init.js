@@ -1,28 +1,5 @@
 import TreeCreator from "./dom_creater.js";
 
-// // Initial first loading animation
-// function InitialAnimation() {
-//     const image_element = document.querySelector(".destination__image img");
-//     image_element.style.animation = 'moveInRight 2s';
-//    
-//     const distance_element = document.querySelector(".destination__characteristics_distance strong");
-//     distance_element.style.animation = "movetoLeft 2s";
-//    
-//     const destination_name_element = document.querySelector(".destination__name");
-//     destination_name_element.style.animation = "movetoLeft 2s";
-//    
-//     const destination_text_name_element = document.querySelector(".destination__text");
-//     destination_text_name_element.style.animation = "movetoLeft 2s";
-//
-//     const time_element =  document.querySelector(".destination__characteristics_travelTime strong");
-//     time_element.style.animation = "movetoLeft 2s";
-// }
-//
-// document.addEventListener('DOMContentLoaded', () => {
-//     InitialAnimation();
-// });
-
-
 // First we will read our json file in the class DataFetcher
 
 class DataFetcher {
@@ -36,7 +13,7 @@ class DataFetcher {
         try {
             const response = await fetch(this.url)
             if (!response.ok) {
-                throw new Error(`Error occurred: ${response.status}`);
+                console.error((`Error occurred: ${response.status}`));
             }
             
             return await response.json();
@@ -99,62 +76,31 @@ export default class PageHandler extends DataFetcher {
 
     defaultTechnology(default_technology, index) {
         if (default_technology) {
-            new TreeCreator(
-                this.type_of_information,
-                index,
-                default_technology.name,
-                default_technology.images.portrait,
-                default_technology.description
-            )
+            new TreeCreator({
+                type: this.type_of_information,
+                index: index,
+                name: default_technology.name,
+                image: default_technology.images.portrait,
+                text: default_technology.description
+            });
         }
     };
 
     defaultDestination(default_destination) {
         if (default_destination) {
-            new TreeCreator(
-                this.type_of_information,
-                default_destination.name,
-                default_destination.images.png,
-                default_destination.description,
-                default_destination.distance,
-                default_destination.travel
-                )
-        } 
-        else  {
-            throw new Error("This object isn't existed")
+            new TreeCreator({
+                type: this.type_of_information,
+                name: default_destination.name,
+                image: default_destination.images.png,
+                text: default_destination.description,
+                distance: default_destination.distance,
+                travel_time: default_destination.travel
+            });
+        } else {
+            throw new Error("This object isn't existed");
         }
     };
     
 }
 
 
-// Main Initialization of data fetching for destinations
-// const nav_element = document.querySelector(".destination__places");
-// nav_element.addEventListener("click", async (e)=> {
-//
-//     // Simple checking for already selected element
-//     if (e.target.classList.length === 0) {
-//         return
-//     }
-//
-//     document.querySelectorAll(".active-destination").forEach(element => {
-//         element.classList.remove("active-destination");
-//     })
-//
-//      if (e.target.classList.contains("destination__places_place")) {
-//          const destination_name = e.target.textContent.trim();
-//          const pageHandler = new PageHandler("./data.json", "destinations");
-//          await pageHandler.initDestination(destination_name);
-//      }
-//
-// });
-
-
-// Main Initialization of data fetching for technologies
-//
-// const technologies_numbers_element = document.querySelector(".technologies_container__description");
-// technologies_numbers_element.addEventListener("click", async (e) => {
-//      const number = Number(e.target.textContent) - 1;
-//      const pageHandler = new PageHandler("./data.json", "technologies");
-//      await pageHandler.initTechnologies(number);
-// });
