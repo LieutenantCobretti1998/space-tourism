@@ -27,10 +27,13 @@ export default class TreeCreator {
         this.#time_element =  document.querySelector(".destination__characteristics_travelTime strong");
         this.#image_element = document.querySelector(".destination__image img");
 
-        if (options.type === "destinations") {
-            this.updateDomTreeDestinations();
-        } else if (options.type === "technologies") {
-            this.updateDomTreeTechnologies();
+        switch (options.type) {
+            case "destinations":
+                this.updateDomTreeDestinations();
+                break
+            case "technologies":
+                this.updateDomTreeTechnologies();
+                break
         }
     }
 
