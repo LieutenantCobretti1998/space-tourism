@@ -24,6 +24,7 @@ main {
 }
 
 .technologies_container {
+  overflow: hidden;
   margin-left: 10rem;
   padding-top: 5.5rem;
   display: flex;
@@ -40,6 +41,21 @@ main {
       font-family: $belleFair;
       letter-spacing: .2rem;
       color: $color-white;
+      width: 8rem;
+      height: 8rem;
+      border: .1rem solid $color-white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: .5rem;
+      text-align: center;
+      transition: all .4s ease;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -77,4 +93,9 @@ main {
       transform: translateY(-7%);
     }
   }
+}
+
+.filled {
+  background-color: $color-white;
+  color: $color-black;
 }
