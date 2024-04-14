@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: normal;
+  color: #FFFFFF;
+  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+body {
+  object-fit: cover;
+  background-image: url("../assets/crew/background-crew-desktop.jpg"); }
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 5.5rem; }
+  .header__logo-container {
+    width: 4.8rem;
+    height: 4.8rem; }
+    .header__logo-container img {
+      max-width: 100%;
+      min-width: 100%;
+      display: block; }
+  .header .crew-highlight::after {
+    content: "";
+    display: block;
+    width: 6.5rem;
+    height: .3rem;
+    background-color: #FFFFFF;
+    margin-top: 1.5rem; }
+  .header .active {
+    pointer-events: none;
+    cursor: default; }
+  .header__line-container {
+    position: absolute;
+    left: 11.2rem;
+    right: 0;
+    top: 50%;
+    height: 0.1rem;
+    width: 47.3rem;
+    background-color: #979797;
+    z-index: 3; }
+  .header__menu-container {
+    flex-grow: 2;
+    margin-left: 44rem;
+    display: flex;
+    width: 83rem;
+    height: 9.6rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.04);
+    z-index: 2; }
+    .header__menu-container__into {
+      width: auto;
+      height: 1.9rem; }
+    .header__menu-container ul {
+      list-style: none;
+      display: flex;
+      gap: 6.5rem; }
+      .header__menu-container ul a {
+        font-size: 1.6rem;
+        font-family: "Barlow Condensed", sans-serif;
+        text-decoration: none;
+        color: #FFFFFF;
+        transition: all 0.3s; }
+        .header__menu-container ul a:hover {
+          color: #F2613F;
+          font-size: 2rem; }
+        .header__menu-container ul a .menu-name {
+          font-weight: normal; }
+        .header__menu-container ul a .menu-number {
+          padding-right: 0.5rem;
+          font-weight: bold; }
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+
+.crew_header {
+  display: inline-block;
+  transform: translate(10rem, 10rem);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: normal;
+  font-size: 2.8rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  word-spacing: 1.2rem; }
+  .crew_header > b {
+    opacity: 25%; }
+
+.crew_information {
+  display: flex;
+  margin-left: 10.5rem;
+  align-items: center;
+  gap: 15rem; }
+  .crew_information__profession {
+    font-size: 3.2rem;
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "Bellefair", sans-serif;
+    letter-spacing: 0;
+    opacity: 50.42%;
+    color: #FFFFFF; }
+  .crew_information__name {
+    color: #FFFFFF;
+    font-family: "Bellefair", sans-serif;
+    font-size: 5.6rem;
+    font-weight: normal;
+    text-align: left; }
+  .crew_information__name, .crew_information__profession {
+    padding-bottom: 2.5rem; }
+  .crew_information__description {
+    max-width: 45rem;
+    font-weight: normal;
+    font-size: 1.8rem;
+    text-align: left;
+    color: #D0D6F9; }
+  .crew_information .crew-image {
+    overflow: hidden;
+    object-fit: cover;
+    width: 45.3rem;
+    height: 65.4rem;
+    transform: translate(0, 5.7rem); }

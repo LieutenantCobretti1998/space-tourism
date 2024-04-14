@@ -1,0 +1,70 @@
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.crew_header {
+  display: inline-block;
+  transform: translate(10rem, 10rem);
+  font-family: $barlow-condensed;
+  font-weight: normal;
+  font-size: 2.8rem;
+  color: $color-white;
+  text-transform: uppercase;
+  word-spacing: 1.2rem;
+
+  & > b {
+    opacity: 25%;
+  }
+}
+
+.crew_information {
+  display: flex;
+  margin-left: 10.5rem;
+  align-items: center;
+  gap: 15rem;
+
+  &__profession {
+    font-size: 3.2rem;
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: $belleFair;
+    letter-spacing: 0;
+    opacity: 50.42%;
+    color: $color-white;
+  }
+
+  &__name {
+    color: $color-white;
+    font-family: $belleFair;
+    font-size: 5.6rem;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  &__name,
+  &__profession {
+    padding-bottom: 2.5rem;
+  }
+
+  &__description {
+    max-width: 45rem;
+    font-weight: normal;
+    font-size: 1.8rem;
+    text-align: left;
+    color: $light-purple;
+
+  }
+
+  .crew-image {
+    overflow: hidden;
+    object-fit: cover;
+    width: 45.3rem;
+    height: 65.4rem;
+    transform: translate(0, 5.7rem);
+  }
+
+}

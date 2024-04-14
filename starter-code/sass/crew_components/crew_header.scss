@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 5.5rem;
+
+
+  &__logo-container {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    img {
+      max-width: 100%;
+      min-width: 100%;
+      display: block;
+    }
+  }
+
+  .crew-highlight::after {
+    content: "";
+    display: block;
+    width: 6.5rem;
+    height: .3rem;
+    background-color: $color-white;
+    margin-top: 1.5rem;
+  }
+
+  .active {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &__line-container {
+    //margin-left: 11.2rem;
+    //width: 47.3rem;
+    //height: 0.1px; // A more typical height for a horizontal line
+    //background-color: black;
+    position: absolute;
+    left: 11.2rem; // Starts from the very left of the header
+    right: 0; // Stretches to the very right of the header
+    top: 50%; // Aligns to the middle vertically
+    height: 0.1rem; // A pixel-high line is typical for separators
+    width: 47.3rem;
+    background-color: $color-light-grey;
+
+    z-index: 3; // Ensures the line is behind the menu container
+
+  }
+
+  &__menu-container {
+    //margin-left: 61rem;
+    flex-grow: 2;
+    margin-left: 44rem;
+    display: flex;
+    width: 83rem;
+    height: 9.6rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.04);
+    z-index: 2;
+
+    &__into {
+      //width: 54.2rem;
+      width: auto;
+      height: 1.9rem
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 6.5rem;
+      a {
+
+        font-size: $header-font-size;
+        font-family: $barlow-condensed;
+        text-decoration: none;
+        color: $color-white;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $transition-color-brown;
+          font-size: 2rem;
+        }
+
+
+        .menu-name {
+          font-weight: normal;
+
+        }
+        .menu-number {
+          padding-right: 0.5rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
