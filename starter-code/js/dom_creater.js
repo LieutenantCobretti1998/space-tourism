@@ -5,6 +5,8 @@ export default class TreeCreator {
     #destination_text
     #distance
     #travel_time
+    #index
+    #role
     #destination_name_element
     #distance_element
     #destination_text_name_element
@@ -19,7 +21,8 @@ export default class TreeCreator {
         this.#destination_text = options.text || '';
         this.#distance = options.distance || '';
         this.#travel_time = options.travel_time || '';
-        this.index = options.index || 0;
+        this.#index = options.index || 0;
+        this.#role = options.role || '';
 
         this.#destination_name_element = document.querySelector(".destination__name");
         this.#distance_element = document.querySelector(".destination__characteristics_distance strong");
@@ -30,10 +33,14 @@ export default class TreeCreator {
         switch (options.type) {
             case "destinations":
                 this.updateDomTreeDestinations();
-                break
+                break;
             case "technologies":
                 this.updateDomTreeTechnologies();
-                break
+                break;
+            case "crew":
+                console.log("TEST");
+                this.updateDomTreeCrew();
+                break;
         }
     }
 
@@ -147,6 +154,53 @@ export default class TreeCreator {
             let number = this.index + 1;
             if (number === Number(element.textContent)) {
                 element.classList.add("filled");
+            }
+        });
+    }
+
+    updateDomTreeCrew() {
+        anime({
+            targets: ".crew_information__profession, .crew_information__text, .crew_information__name, .crew-image",
+            keyframes: [
+                { translateY: -75, opacity: [1, 0] }
+            ],
+            duration: 2000,
+            easing: "easeOutElastic(1, .8)",
+            complete: () => {
+                const profession_element = document.querySelector(".crew_information__profession");
+                console.log(profession_element);
+                console.log(this.#role)
+                profession_element.textContent = this.#role;
+
+                const crew_name_element = document.querySelector(".crew_information__name");
+                crew_name_element.textContent = this.#destination_name;
+                console.log(this.#destination_name);
+                const description_element = document.querySelector(".crew_information__text");
+                description_element.textContent = this.#destination_text;
+
+                const image_element = document.querySelector(".crew-image");
+                console.log(this.#destination_image)
+                image_element.src = this.#destination_image;
+                image_element.alt = this.#destination_name;
+
+                // Ensure elements are ready for the next animation
+                anime({
+                    targets: ".crew_information__profession, .crew_information__text, .crew_information__name",
+                    keyframes: [
+                        { translateY: [75, 0], opacity: [0, 1] }
+                    ],
+                    duration: 2000,
+                    easing: "easeOutElastic(1, .8)"
+                });
+
+                anime({
+                    targets: ".crew-image",
+                    keyframes: [
+                        { translateY: [75, 70], opacity: [0, 1] }
+                    ],
+                    duration: 2000,
+                    easing: "easeOutElastic(1, .8)"
+                })
             }
         });
 

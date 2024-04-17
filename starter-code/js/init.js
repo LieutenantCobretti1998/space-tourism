@@ -74,6 +74,20 @@ export default class PageHandler extends DataFetcher {
         }
     };
 
+    async initCrew(crew_index) {
+        try {
+            const data = await this.fetchData();
+            if(data && data.crew && data.crew[crew_index] !== undefined) {
+                const crew = await data.crew[crew_index];
+                console.log(crew);
+                this.defaultCrew(crew);
+            }
+        }
+        catch (e) {
+            console.error(`something went wrong: ${e.message}`);
+        }
+    }
+
     defaultTechnology(default_technology, index) {
         if (default_technology) {
             new TreeCreator({
@@ -100,6 +114,18 @@ export default class PageHandler extends DataFetcher {
             throw new Error("This object isn't existed");
         }
     };
+
+    defaultCrew(default_crew) {
+        if (default_crew) {
+            new TreeCreator({
+                type: this.type_of_information,
+                name: default_crew.name,
+                image:default_crew.images.png,
+                text: default_crew.bio,
+                role: default_crew.role
+            })
+        }
+    }
     
 }
 

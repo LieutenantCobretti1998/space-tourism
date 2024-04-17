@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="css/crew.css">
   
   <title>Frontend Mentor | Space tourism website</title>
+  <script type="module" src="js/crew.js"></script>
 </head>
 <body>
 
   <header class="header">
+
     <div class="header__logo-container">
       <img src="assets/shared/logo.svg" alt="main logo">
     </div>
@@ -24,17 +26,21 @@
           <li><a class="navigation" href="index.html"><span class="menu-number">00 </span><span class="menu-name">Home</span></a></li>
           <li><a class="navigation" href="destinations.html"><span class="menu-number">01 </span><span class="menu-name">Destination</span></a></li>
           <li><a class="navigation crew-highlight active" href="crew.html"><span class="menu-number">02 </span><span class="menu-name">Crew</span></a></li>
-          <li><a class="navigation" href="#"><span class="menu-number">03 </span><span class="menu-name">Technology</span></a></li>
+          <li><a class="navigation" href="technologies.html"><span class="menu-number">03 </span><span class="menu-name">Technology</span></a></li>
         </ul>
       </div>
     </div>
+
   </header>
+
   <main>
+
     <section>
     <h2 class="crew_header"><b>02</b> Meet your crew</h2>
     </section>
 
     <section class="crew_information">
+
       <div class="crew_information__description">
         <h2 class="crew_information__profession">
           Commander
@@ -44,15 +50,23 @@
           Douglas Hurley
         </h1>
 
-        <p class="crew_information__description">
+        <p class="crew_information__text">
           Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
           and former NASA astronaut. He launched into space for the third time as
           commander of Crew Dragon Demo-2.
         </p>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
       </div>
       <img class="crew-image" src="assets/crew/image-douglas-hurley.png" alt="Douglas hurley">
     </section>
 
   </main>
+
 </body>
 </html>

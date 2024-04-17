@@ -14,6 +14,19 @@
       display: block;
     }
   }
+  .home-active::after {
+    content: "";
+    display: block;
+    width: 7rem;
+    height: .3rem;
+    background-color: $color-white;
+    margin-top: 1.5rem;
+  }
+
+  .active {
+    pointer-events: none;
+    cursor: default;
+  }
 
   &__line-container {
     //margin-left: 11.2rem;
@@ -66,7 +79,7 @@
 
         &:hover {
           color: $transition-color-brown;
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
 
 

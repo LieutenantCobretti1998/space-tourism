@@ -33,7 +33,7 @@ body {
       max-width: 100%;
       min-width: 100%;
       display: block; }
-  .header .destination-highlight::after {
+  .header .destination-technology::after {
     content: "";
     display: block;
     width: 10.2rem;
@@ -73,7 +73,7 @@ body {
       gap: 6.5rem; }
       .header__menu-container ul a {
         font-size: 1.6rem;
-        font-family: "Barlow Condensed";
+        font-family: "Barlow Condensed", sans-serif;
         text-decoration: none;
         color: #FFFFFF;
         transition: all 0.3s; }
@@ -111,7 +111,8 @@ main {
   position: absolute;
   top: 12.2rem;
   left: 18.65rem;
-  font-family: "Barlow Condensed";
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: normal;
   font-size: 2.8rem;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -135,7 +136,7 @@ main {
     font-size: 10rem;
     font-weight: normal;
     text-transform: uppercase;
-    font-family: "Bellefair";
+    font-family: "Bellefair", sans-serif;
     text-align: left;
     letter-spacing: .1rem; }
   .destination__text {
@@ -143,7 +144,7 @@ main {
     width: 44.4rem;
     font-size: 1.8rem;
     color: #D0D6F9;
-    font-family: "Barlow Condensed";
+    font-family: "Barlow Condensed", sans-serif;
     text-align: left;
     line-height: 3.2rem; }
   .destination__line {
@@ -161,7 +162,7 @@ main {
       width: 5.6rem;
       height: 1.9rem;
       font-size: 1.6rem;
-      font-family: "Barlow Condensed";
+      font-family: "Barlow Condensed", sans-serif;
       text-transform: uppercase;
       transition: color 0.3s .1s ease-in-out; }
       .destination__places > ul > li::after {
@@ -196,11 +197,11 @@ main {
       .destination__characteristics_distance > p, .destination__characteristics_travelTime > p {
         letter-spacing: .236rem;
         font-size: 1.4rem;
-        font-family: "Barlow Condensed"; }
+        font-family: "Barlow Condensed", sans-serif; }
       .destination__characteristics_distance > strong, .destination__characteristics_travelTime > strong {
         font-size: 2.8rem;
         text-align: left;
-        font-family: "Bellefair"; }
+        font-family: "Bellefair", sans-serif; }
 
 @keyframes moveOutLeft {
   from {

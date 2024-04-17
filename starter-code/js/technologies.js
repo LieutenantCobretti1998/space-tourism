@@ -22,8 +22,11 @@ technologies_numbers_element.addEventListener("click", async (e) => {
     document.querySelectorAll(".filled").forEach(element => {
         element.classList.remove("filled");
     })
-    
-    const number = Number(e.target.textContent) - 1;
-    const pageHandler = new PageHandler("./data.json", "technologies");
-    await pageHandler.initTechnologies(number);
+
+    if(e.target.classList.contains("technologies_container__numbers__number")) {
+        e.target.classList.add("filled");
+        const number = Number(e.target.textContent) - 1;
+        const pageHandler = new PageHandler("./data.json", "technologies");
+        await pageHandler.initTechnologies(number);
+    }
 });

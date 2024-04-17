@@ -1,7 +1,9 @@
 {
   "devDependencies": {
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "vite": "^5.2.9"
   },
+  "type": "module",
   "name": "space-tourism-website-main",
   "description": "![Design preview for the Space tourism website coding challenge](./preview.jpg)",
   "version": "1.0.0",
@@ -26,22 +28,24 @@
     "to-regex-range": "^5.0.1"
   },
   "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --port 8080",
     "watch:sass": "node-sass starter-code/sass/home.scss starter-code/css/home.css -w",
     "watch:sassDestinations": "node-sass starter-code/sass/destination.scss starter-code/css/destinations.css -w",
     "watch:sassTechnologies": "node-sass starter-code/sass/technologies.scss starter-code/css/technologies.css -w",
     "watch:sassCrew": "node-sass starter-code/sass/crew.scss starter-code/css/crew.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/home.scss css/style.comp.css",
-    "compile:sass:home": "node-sass sass/home.scss css/home.css",
-    "compile:sass:destination": "node-sass sass/destination.scss css/destinations.css",
-    "compile:sass:technologies": "node-sass sass/technologies.scss css/technologies.css",
-    "compile:sass:crew": "node-sass sass/crew.scss css/crew.css",
+    "compile:sass": "node-sass starter-code/sass/home.scss css/style.comp.css",
+    "compile:sass:home": "node-sass starter-code/sass/home.scss css/home.css",
+    "compile:sass:destination": "node-sass starter-code/sass/destination.scss css/destinations.css",
+    "compile:sass:technologies": "node-sass starter-code/sass/technologie s.scss css/technologies.css",
+    "compile:sass:crew": "node-sass starter-code/sass/crew.scss css/crew.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass:home compile:sass:destination compile:sass:technologies \"compile:sass:crew\" concat:css prefix:css compress:css"
-
   },
   "keywords": [],
   "author": "",

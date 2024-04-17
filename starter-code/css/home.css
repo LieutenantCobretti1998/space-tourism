@@ -33,6 +33,16 @@ body {
       max-width: 100%;
       min-width: 100%;
       display: block; }
+  .header .home-active::after {
+    content: "";
+    display: block;
+    width: 7rem;
+    height: .3rem;
+    background-color: #FFFFFF;
+    margin-top: 1.5rem; }
+  .header .active {
+    pointer-events: none;
+    cursor: default; }
   .header__line-container {
     position: absolute;
     left: 11.2rem;
@@ -63,13 +73,13 @@ body {
       gap: 6.5rem; }
       .header__menu-container ul a {
         font-size: 1.6rem;
-        font-family: "Barlow Condensed";
+        font-family: "Barlow Condensed", sans-serif;
         text-decoration: none;
         color: #FFFFFF;
         transition: all 0.3s; }
         .header__menu-container ul a:hover {
           color: #F2613F;
-          font-size: 2.5rem; }
+          font-size: 2rem; }
         .header__menu-container ul a .menu-name {
           font-weight: normal; }
         .header__menu-container ul a .menu-number {
@@ -93,7 +103,7 @@ body {
     margin-bottom: 2.5rem; }
     .main-part .spaceDiv__space {
       font-size: 15rem;
-      font-family: "Bellefair"; }
+      font-family: "Bellefair", sans-serif; }
   .main-part__description {
     width: 40rem;
     text-align: center; }
@@ -116,9 +126,6 @@ body {
       text-align: center;
       font-size: 3.2rem;
       letter-spacing: .2rem;
-      font-family: "Bellefair";
+      font-family: "Bellefair", sans-serif;
       text-transform: uppercase;
       text-decoration: none; }
-
-/*body {*/
-/*  background-image: url("..assets/destination/image-europa.png"); }*/
