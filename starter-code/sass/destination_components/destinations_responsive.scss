@@ -1,0 +1,180 @@
+
+// Tablets max 1024px
+@media only screen and (max-width: 79em) and (min-width: 48em) {
+  html {
+    font-size: 45.25%;
+  }
+
+  body {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  .destination {
+    flex-direction: column;
+    margin-top: 5rem;
+    position: static;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section_pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
+
+  .pick_destination {
+    position: static;
+  }
+
+  .destination__places > ul {
+    gap: 2.5rem;
+  }
+}
+
+// Small screens max 1600px and min 1280px
+@media only screen and (min-width: 80em) and (max-width: 100em) {
+  html {
+    font-size: 50.25%;
+  }
+
+  .header {
+    &__logo-container {
+      width: 6.5rem;
+      height: 6.5rem;
+
+    }
+
+    &__line-container {
+      left: 10rem;
+      width: 13.5rem;
+    }
+
+    &__menu-container {
+      justify-content: start;
+      margin-left: 15rem
+    }
+
+    & ul {
+      padding-left: 7.5rem;
+      gap: 16.5rem;
+    }
+  }
+  .destination {
+    gap: 35rem;
+  }
+}
+
+// Medium screens max 2560px width and min 1920 px
+@media only screen and (min-width: 100em) and (max-width: 160em) {
+  html {
+    font-size: 80%;
+  }
+
+  .header {
+    &__logo-container {
+      width: 7rem;
+      height: 7rem;
+
+    }
+
+    &__line-container {
+      width: 13.5rem;
+    }
+
+    &__menu-container {
+      justify-content: start;
+      margin-left: 15rem;
+    }
+
+    & ul {
+      padding-left: 11.5rem;
+      gap: 7.5rem;
+
+      > li > a > span {
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .destination {
+      display: flex;
+      gap: 40rem;
+    }
+  }
+
+  .destination {
+    left: 10rem;
+  }
+}
+// large 2k screens
+@media only screen and (min-width : 160em) and (max-width : 187.5em) {
+  html {
+    font-size: 105%;
+  }
+  .header {
+    &__logo-container  {
+      width: 7rem;
+      height: 7rem;
+
+    }
+    &__menu-container {
+      justify-content: start;
+    }
+
+    & ul {
+      padding-left: 11.5rem;
+      gap: 7.5rem;
+    }
+  }
+
+  .destination {
+    left: 10rem;
+  }
+}
+
+ //Extra large screens 4k
+@media only screen and (min-width : 187.5em) {
+  html {
+    font-size: 115%;
+  }
+
+  .header {
+    &__logo-container  {
+      width: 5rem;
+      height: 5rem;
+
+    }
+    &__menu-container {
+      justify-content: start;
+    }
+
+    & ul {
+      padding-left: 11.5rem;
+      gap: 7.5rem;
+
+      > li > a > span {
+        font-size: 2.5rem;
+
+      }
+    }
+  }
+
+  .destination {
+    //top: 15rem;
+  }
+
+  .pick_destination {
+    top: 5.5rem;
+  }
+
+}
+
+
+// For 3840 X 2160
+@media screen and  (width : 240em) and (height : 135em) {
+  html {
+    font-size: 135%;
+  }
+}
