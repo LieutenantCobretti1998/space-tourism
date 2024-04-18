@@ -33,7 +33,7 @@ body {
       max-width: 100%;
       min-width: 100%;
       display: block; }
-  .header .destination-technology::after {
+  .header .destination-highlight::after {
     content: "";
     display: block;
     width: 10.2rem;
@@ -72,6 +72,7 @@ body {
       display: flex;
       gap: 6.5rem; }
       .header__menu-container ul a {
+        display: inline-block;
         font-size: 1.6rem;
         font-family: "Barlow Condensed", sans-serif;
         text-decoration: none;
@@ -79,7 +80,8 @@ body {
         transition: all 0.3s; }
         .header__menu-container ul a:hover {
           color: #F2613F;
-          font-size: 2rem; }
+          transform: scale(1.3);
+          transform-origin: center; }
         .header__menu-container ul a .menu-name {
           font-weight: normal; }
         .header__menu-container ul a .menu-number {
@@ -234,3 +236,98 @@ main {
   to {
     opacity: 1;
     transform: translateX(0); } }
+
+@media only screen and (max-width: 79em) and (min-width: 48em) {
+  html {
+    font-size: 45.25%; }
+  body {
+    background-image: url("../assets/destination/background-destination-tablet.jpg"); }
+  .destination {
+    flex-direction: column;
+    margin-top: 5rem;
+    position: static;
+    justify-content: center;
+    align-items: center; }
+  .section_pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem; }
+  .pick_destination {
+    position: static; }
+  .destination__places > ul {
+    gap: 2.5rem; } }
+
+@media only screen and (min-width: 80em) and (max-width: 100em) {
+  html {
+    font-size: 50.25%; }
+  .header__logo-container {
+    width: 6.5rem;
+    height: 6.5rem; }
+  .header__line-container {
+    left: 10rem;
+    width: 13.5rem; }
+  .header__menu-container {
+    justify-content: start;
+    margin-left: 15rem; }
+  .header ul {
+    padding-left: 7.5rem;
+    gap: 16.5rem; }
+  .destination {
+    gap: 35rem; } }
+
+@media only screen and (min-width: 100em) and (max-width: 160em) {
+  html {
+    font-size: 80%; }
+  .header__logo-container {
+    width: 7rem;
+    height: 7rem; }
+  .header__line-container {
+    width: 13.5rem; }
+  .header__menu-container {
+    justify-content: start;
+    margin-left: 15rem; }
+  .header ul {
+    padding-left: 11.5rem;
+    gap: 7.5rem; }
+    .header ul > li > a > span {
+      font-size: 1.5rem; }
+  .header .destination {
+    display: flex;
+    gap: 40rem; }
+  .destination {
+    left: 10rem; } }
+
+@media only screen and (min-width: 160em) and (max-width: 187.5em) {
+  html {
+    font-size: 105%; }
+  .header__logo-container {
+    width: 7rem;
+    height: 7rem; }
+  .header__menu-container {
+    justify-content: start; }
+  .header ul {
+    padding-left: 11.5rem;
+    gap: 7.5rem; }
+  .destination {
+    left: 10rem; } }
+
+@media only screen and (min-width: 187.5em) {
+  html {
+    font-size: 115%; }
+  .header__logo-container {
+    width: 5rem;
+    height: 5rem; }
+  .header__menu-container {
+    justify-content: start; }
+  .header ul {
+    padding-left: 11.5rem;
+    gap: 7.5rem; }
+    .header ul > li > a > span {
+      font-size: 2.5rem; }
+  .pick_destination {
+    top: 5.5rem; } }
+
+@media screen and (width: 240em) and (height: 135em) {
+  html {
+    font-size: 135%; } }
