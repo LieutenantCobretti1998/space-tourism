@@ -39,7 +39,7 @@
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass starter-code/sass/home.scss css/style.comp.css",
     "compile:sass:home": "node-sass starter-code/sass/home.scss css/home.css",
-    "compile:sass:destination": "node-sass starter-code/sass/destination.scss css/destinations.css",
+    "compile:sass:destination": "node-sass starter-code/sass/destination.scss starter-code/css/destinations.css",
     "compile:sass:technologies": "node-sass starter-code/sass/technologie s.scss css/technologies.css",
     "compile:sass:crew": "node-sass starter-code/sass/crew.scss css/crew.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
