@@ -1,4 +1,5 @@
 import anime from "../../node_modules/animejs/lib/anime.es.js";
+import stopDestinationsClicking from "./destinations.js";
 export default class TreeCreator {
     #destination_name
     #destination_image
@@ -115,6 +116,9 @@ export default class TreeCreator {
         this.#destination_name_element.addEventListener("animationend", handle_animation_end);
         this.#time_element.addEventListener("animationend", handle_animation_end);
         this.#destination_text_name_element.addEventListener("animationend", handle_animation_end);
+        setTimeout(() => {
+            stopDestinationsClicking("", "pointer");
+        }, 3500);
     };
 
     updateDomTreeTechnologies() {
