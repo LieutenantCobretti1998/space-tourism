@@ -1,5 +1,5 @@
 import PageHandler from "./init.js";
-import stopDestinationsClicking from "./helpers.js";
+import {stopDestinationsClicking} from "./helpers.js";
 
 // Initial first loading animation
 function InitialAnimation() {
