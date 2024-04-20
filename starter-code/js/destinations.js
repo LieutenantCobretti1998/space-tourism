@@ -1,5 +1,5 @@
 import PageHandler from "./init.js";
-
+import stopDestinationsClicking from "./helpers.js";
 
 // Initial first loading animation
 function InitialAnimation() {
@@ -23,12 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     InitialAnimation();
 });
 
-export default function stopDestinationsClicking(pointer, cursor) {
-    document.querySelectorAll(".destination__places_place").forEach(element => {
-        element.style.pointerEvents = pointer;
-        element.style.cursor = cursor;
-    });
-}
+
 
 // Main Initialization of data fetching for destinations
 const nav_element = document.querySelector(".destination__places");
@@ -49,7 +44,6 @@ nav_element.addEventListener("click", async (e)=> {
         const destination_name = e.target.textContent.trim();
         const pageHandler = new PageHandler("./data.json", "destinations");
         await pageHandler.initDestination(destination_name);
-        // stopDestinationsClicking("", "pointer");
     }
 
 });

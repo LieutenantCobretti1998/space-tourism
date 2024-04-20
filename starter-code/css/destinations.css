@@ -243,14 +243,19 @@ main {
   body {
     background-image: url("../assets/destination/background-destination-mobile.jpg"); }
   .destination {
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-top: 5rem;
     position: static;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center; }
   .section_pick {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
     margin-top: 15rem; }
   .pick_destination {
@@ -258,20 +263,22 @@ main {
   .destination__places > ul {
     gap: 1.5rem; }
   .header {
-    margin-top: 0;
-    margin-left: 1rem; }
+    margin-left: 0; }
     .header__logo-container {
       display: none; }
     .header__line-container {
       display: none; }
     .header__menu-container {
+      -webkit-justify-content: center;
       justify-content: center;
       margin-left: 0; }
     .header ul {
-      padding-left: 11.5rem;
+      padding-left: 4.4rem;
       gap: 7.5rem; }
       .header ul > li > a > span {
-        font-size: 1.1rem; } }
+        font-size: 1.3rem; }
+  .destination-highlight::after {
+    width: 5.2em !important; } }
 
 @media screen and (max-width: 26.4em) and (min-width: 23.4em) {
   html {
@@ -279,14 +286,19 @@ main {
   body {
     background-image: url("../assets/destination/background-destination-mobile.jpg"); }
   .destination {
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-top: 5rem;
     position: static;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center; }
   .section_pick {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
     margin-top: 15rem; }
   .pick_destination {
@@ -294,34 +306,42 @@ main {
   .destination__places > ul {
     gap: 1.5rem; }
   .header {
-    margin-left: 1rem; }
+    margin-left: 0; }
     .header__logo-container {
       width: 2.5rem;
-      height: 2.5rem; }
+      height: 2.5rem;
+      display: none; }
     .header__line-container {
       display: none; }
     .header__menu-container {
+      -webkit-justify-content: center;
       justify-content: center;
-      margin-left: 2rem; }
+      margin-left: 0; }
     .header ul {
-      padding-left: 11.5rem;
+      padding-left: 5.5rem;
       gap: 7.5rem; }
       .header ul > li > a > span {
-        font-size: 1.50rem; } }
+        font-size: 1.5rem; }
+  .destination-highlight::after {
+    width: 7em !important; } }
 
-@media only screen and (max-width: 48em) and (min-width: 26.5em) {
+@media only screen and (max-width: 47.999em) and (min-width: 26.5em) {
   html {
     font-size: 35.25%; }
   body {
     background-image: url("../assets/destination/background-destination-tablet.jpg"); }
   .destination {
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-top: 5rem;
     position: static;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center; }
   .section_pick {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
     align-items: center;
     margin-top: 15rem; }
@@ -332,22 +352,25 @@ main {
   .header {
     margin-left: 1rem; }
     .header__logo-container {
-      width: 2.5rem;
-      height: 2.5rem; }
+      width: 4.5rem;
+      height: 4.5rem; }
     .header__line-container {
       display: none; }
     .header__menu-container {
+      -webkit-justify-content: center;
       justify-content: center;
-      margin-left: 2rem; }
+      margin-left: 1.3rem; }
     .header ul {
-      padding-left: 11.5rem;
+      padding-left: 6.5rem;
       gap: 7.5rem; }
       .header ul > li > a > span {
-        font-size: 1.50rem; } }
+        font-size: 1.6rem; }
+  .destination-highlight::after {
+    width: 8em !important; } }
 
 @media only screen and (max-width: 79em) and (min-width: 48em) {
   html {
-    font-size: 45.25%; }
+    font-size: 40.25%; }
   body {
     background-image: url("../assets/destination/background-destination-tablet.jpg"); }
   .header__line-container {
@@ -374,11 +397,13 @@ main {
   .pick_destination {
     position: static; }
   .destination__places > ul {
-    gap: 2.5rem; } }
+    gap: 2.5rem; }
+  .destination-highlight::after {
+    width: 9em !important; } }
 
-@media only screen and (max-width: 79em) and (min-width: 48em) and (min-width: 80em) and (max-width: 100em) {
+@media only screen and (min-width: 78.999em) and (max-width: 99.999em) {
   html {
-    font-size: 50.25%; }
+    font-size: 45.25%; }
   .header__logo-container {
     width: 6.5rem;
     height: 6.5rem; }
@@ -392,11 +417,13 @@ main {
     padding-left: 7.5rem;
     gap: 16.5rem; }
   .destination {
-    gap: 35rem; } }
+    gap: 35rem; }
+  .destination-highlight::after {
+    width: 8.2em !important; } }
 
-@media only screen and (max-width: 79em) and (min-width: 48em) and (min-width: 100em) and (max-width: 160em) {
+@media only screen and (min-width: 100em) and (max-width: 159.999em) {
   html {
-    font-size: 80%; }
+    font-size: 100%; }
   .header__logo-container {
     width: 7rem;
     height: 7rem; }
@@ -414,9 +441,11 @@ main {
     display: flex;
     gap: 40rem; }
   .destination {
-    left: 10rem; } }
+    left: 10rem; }
+  .destination-highlight::after {
+    width: 10.5em !important; } }
 
-@media only screen and (max-width: 79em) and (min-width: 48em) and (min-width: 160em) and (max-width: 187.5em) {
+@media screen and (min-width: 160em) and (max-width: 187.5em) {
   html {
     font-size: 105%; }
   .header__logo-container {
@@ -428,9 +457,11 @@ main {
     padding-left: 11.5rem;
     gap: 7.5rem; }
   .destination {
-    left: 10rem; } }
+    left: 10rem; }
+  .destination-highlight::after {
+    width: 11em !important; } }
 
-@media only screen and (max-width: 79em) and (min-width: 48em) and (min-width: 187.5em) {
+@media only screen and (min-width: 187.6em) {
   html {
     font-size: 115%; }
   .header__logo-container {
@@ -444,8 +475,10 @@ main {
     .header ul > li > a > span {
       font-size: 2.5rem; }
   .pick_destination {
-    top: 5.5rem; } }
+    top: 5.5rem; }
+  .destination-highlight::after {
+    width: 12.5em !important; } }
 
-@media only screen and (max-width: 79em) and (min-width: 48em) and (width: 240em) and (height: 135em) {
+@media screen and (width: 240em) and (height: 135em) {
   html {
-    font-size: 135%; } }
+    font-size: 134%; } }

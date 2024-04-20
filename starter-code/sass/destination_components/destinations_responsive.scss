@@ -9,17 +9,23 @@
     background-image: url("../assets/destination/background-destination-mobile.jpg");
   }
 
+
   .destination {
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-top: 5rem;
     position: static;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
   }
 
   .section_pick {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
     margin-top: 15rem;
   }
@@ -33,8 +39,7 @@
   }
 
   .header {
-    margin-top: 0;
-    margin-left: 1rem;
+    margin-left: 0;
     &__logo-container {
       display: none;
 
@@ -45,18 +50,22 @@
     }
 
     &__menu-container {
+      -webkit-justify-content: center;
       justify-content: center;
       margin-left: 0;
     }
 
     & ul {
-      padding-left: 11.5rem;
+      padding-left: 4.4rem;
       gap: 7.5rem;
 
       > li > a > span {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
     }
+  }
+  .destination-highlight::after {
+    width: 5.2em !important;
   }
 }
 
@@ -70,17 +79,23 @@
     background-image: url("../assets/destination/background-destination-mobile.jpg");
   }
 
+
   .destination {
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-top: 5rem;
     position: static;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
   }
 
   .section_pick {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
     margin-top: 15rem;
   }
@@ -94,10 +109,11 @@
   }
 
   .header {
-    margin-left: 1rem;
+    margin-left: 0;
     &__logo-container {
       width: 2.5rem;
       height: 2.5rem;
+      display: none;
 
     }
 
@@ -106,18 +122,22 @@
     }
 
     &__menu-container {
+      -webkit-justify-content: center;
       justify-content: center;
-      margin-left: 2rem;
+      margin-left: 0;
     }
 
     & ul {
-      padding-left: 11.5rem;
+      padding-left: 5.5rem;
       gap: 7.5rem;
 
       > li > a > span {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
       }
     }
+  }
+  .destination-highlight::after {
+    width: 7em !important;
   }
 }
 
@@ -125,7 +145,7 @@
 
 // Tablets and large mobiles max 768 px
 
-@media only screen and (max-width: 48em) and (min-width: 26.5em) {
+@media only screen and (max-width: 47.999em) and (min-width: 26.5em) {
   html {
     font-size: 35.25%;
   }
@@ -135,15 +155,20 @@
   }
 
   .destination {
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-top: 5rem;
     position: static;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
   }
 
+
   .section_pick {
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
     align-items: center;
     margin-top: 15rem;
@@ -160,8 +185,9 @@
   .header {
     margin-left: 1rem;
     &__logo-container {
-      width: 2.5rem;
-      height: 2.5rem;
+      //display: none;
+      width: 4.5rem;
+      height: 4.5rem;
 
     }
 
@@ -170,25 +196,29 @@
     }
 
     &__menu-container {
+      -webkit-justify-content: center;
       justify-content: center;
-      margin-left: 2rem;
+      margin-left: 1.3rem;
     }
 
     & ul {
-      padding-left: 11.5rem;
+      padding-left: 6.5rem;
       gap: 7.5rem;
 
       > li > a > span {
-        font-size: 1.50rem;
+        font-size: 1.6rem;
       }
     }
+  }
+  .destination-highlight::after {
+    width: 8em !important;
   }
 }
 
 // Tablets max 1024px
 @media only screen and (max-width: 79em) and (min-width: 48em) {
   html {
-    font-size: 45.25%;
+    font-size: 40.25%;
   }
 
   body {
@@ -217,34 +247,39 @@
     }
 
   }
-    .destination {
-      flex-direction: column;
-      margin-top: 5rem;
-      position: static;
-      justify-content: center;
-      align-items: center;
-    }
+  .destination {
+    flex-direction: column;
+    margin-top: 5rem;
+    position: static;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .section_pick {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15rem;
-    }
+  .section_pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
 
-    .pick_destination {
-      position: static;
-    }
+  .pick_destination {
+    position: static;
+  }
 
-    .destination__places > ul {
-      gap: 2.5rem;
-    }
+  .destination__places > ul {
+    gap: 2.5rem;
+  }
+
+  .destination-highlight::after {
+    width: 9em !important;
+  }
+}
 
 
   // Small screens max 1600px and min 1280px
-  @media only screen and (min-width: 80em) and (max-width: 100em) {
+  @media only screen and (min-width: 78.999em) and (max-width: 99.999em) {
     html {
-      font-size: 50.25%;
+      font-size: 45.25%;
     }
 
     .header {
@@ -272,12 +307,16 @@
     .destination {
       gap: 35rem;
     }
+
+    .destination-highlight::after {
+      width: 8.2em !important;
+    }
   }
 
   // Medium screens max 2560px width and min 1920 px
-  @media only screen and (min-width: 100em) and (max-width: 160em) {
+  @media only screen and (min-width: 100em) and (max-width: 159.999em) {
     html {
-      font-size: 80%;
+      font-size: 100%;
     }
 
     .header {
@@ -315,9 +354,13 @@
     .destination {
       left: 10rem;
     }
+
+    .destination-highlight::after {
+      width: 10.5em !important;
+    }
   }
   // large 2k screens
-  @media only screen and (min-width: 160em) and (max-width: 187.5em) {
+  @media screen and (min-width: 160em) and (max-width: 187.5em) {
     html {
       font-size: 105%;
     }
@@ -341,10 +384,14 @@
     .destination {
       left: 10rem;
     }
+    .destination-highlight::after {
+      width: 11em !important;
+    }
+
   }
 
   //Extra large screens 4k
-  @media only screen and (min-width: 187.5em) {
+  @media only screen and (min-width: 187.6em) {
     html {
       font-size: 115%;
     }
@@ -379,13 +426,16 @@
       top: 5.5rem;
     }
 
+    .destination-highlight::after {
+      width: 12.5em !important;
+    }
+
   }
 
 
   // For 3840 X 2160
   @media screen and (width: 240em) and (height: 135em) {
     html {
-      font-size: 135%;
+      font-size: 134%;
     }
   }
-}
