@@ -1,4 +1,5 @@
 import TreeCreator from "./dom_creater.js";
+import { DynamicImage } from "./helpers.js";
 
 // First we will read our json file in the class DataFetcher
 
@@ -89,12 +90,13 @@ export default class PageHandler extends DataFetcher {
     }
 
     defaultTechnology(default_technology, index) {
+        const orientation = DynamicImage()
         if (default_technology) {
             new TreeCreator({
                 type: this.type_of_information,
                 index: index,
                 name: default_technology.name,
-                image: default_technology.images.portrait,
+                image: default_technology.images[orientation],
                 text: default_technology.description
             });
         }

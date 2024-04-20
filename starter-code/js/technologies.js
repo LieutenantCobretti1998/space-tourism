@@ -1,9 +1,12 @@
 import PageHandler from "./init.js";
 import anime from "../../node_modules/animejs/lib/anime.es.js";
-
+import { DynamicImage } from "./helpers.js";
 // Main animation init
 
 document.addEventListener("DOMContentLoaded", () => {
+    const orientation = DynamicImage();
+    const image_element = document.getElementById("dynamic-image");
+    image_element.src = `assets/technology/image-launch-vehicle-${orientation}.jpg`;
     anime({
         targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
         keyframes: [

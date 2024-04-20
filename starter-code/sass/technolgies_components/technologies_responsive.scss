@@ -1,0 +1,164 @@
+// Tablets
+
+@media screen and (max-width: 48em) {
+  body {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+    background-size: auto;
+  }
+  html {
+    font-size: 38.25%;
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+
+    &__line-container {
+      display: none;
+    }
+
+    &__logo-container {
+      min-width: 4.8em;
+      height: auto;
+    }
+
+    &__menu-container {
+      margin-left: 5.5rem;
+    }
+
+    &__hamburger-menu {
+      display: none;
+    }
+
+
+  }
+
+  main {
+    margin-top: 1.5rem;
+    gap: 5rem;
+  }
+
+  .space_launch_header {
+    align-self: center;
+    word-spacing: 1rem;
+    justify-content: center;
+    display: flex;
+    transform: none;
+
+    > b {
+      padding-right: 2rem;
+    }
+  }
+
+  .technologies_container {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-left: 0;
+    padding-top: 0;
+
+    &__numbers {
+      flex-direction: row;
+    }
+
+    &__image > img {
+
+      max-width: 45em;
+    }
+
+    &__description {
+      align-items: center;
+
+      &__text {
+        text-align: center;
+        padding: 2.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 28.6em)  {
+  body {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+    background-size: cover;
+  }
+  html {
+    font-size: 31.25%;
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-right: 3.5rem;
+
+    &__line-container {
+      display: none;
+    }
+
+    &__menu-container {
+      display: none;
+    }
+
+    &__logo-container {
+      min-width: 4.8em;
+    }
+
+    &__hamburger-menu {
+      align-self: center;
+      max-width: 3.5rem;
+      height: auto;
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      fill: $color-white;
+    }
+
+  }
+
+  main {
+    margin-top: 1.5rem;
+    gap: 5rem;
+  }
+
+  .space_launch_header {
+    align-self: center;
+    word-spacing: 1rem;
+    justify-content: center;
+    display: flex;
+    transform: none;
+
+    > b {
+      padding-right: 2rem;
+    }
+  }
+
+  .technologies_container {
+      align-items: center;
+      flex-direction: column-reverse;
+      margin-left: 0;
+      padding-top: 0;
+
+    &__numbers {
+      flex-direction: row;
+    }
+
+    &__image > img {
+
+      max-width: 45em;
+    }
+
+    &__description {
+      align-items: center;
+
+      &__text {
+        text-align: center;
+        padding: 2.5rem;
+      }
+    }
+  }
+
+}
+
+

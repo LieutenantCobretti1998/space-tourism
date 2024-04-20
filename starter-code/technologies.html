@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="css/technologies.css">
@@ -15,7 +15,25 @@
       <img src="assets/shared/logo.svg" alt="main logo">
     </div>
 
-    <div class="header__line-container"></div>
+    <div class="header__line-container" aria-label="Open Menu"></div>
+    <button type="button" title="open-menu" class="header__hamburger-menu">
+      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+           fill-rule="evenodd"
+           clip-rule="evenodd"><path
+              d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" f
+              fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+    </button>
+
+    <div class="menu-overlay">
+      <nav class="fullscreen-menu">
+        <ul>
+          <li><a class="navigation" href="index.html"><span class="menu-number">00 </span><span class="menu-name">Home</span></a></li>
+          <li><a class="navigation" href="destinations.html"><span class="menu-number">01 </span><span class="menu-name">Destination</span></a></li>
+          <li><a class="navigation" href="crew.html"><span class="menu-number">02 </span><span class="menu-name">Crew</span></a></li>
+          <li><a class="navigation technology-highlight active" href="#"><span class="menu-number">03 </span><span class="menu-name">Technology</span></a></li>
+        </ul>
+      </nav>
+    </div>
 
     <div class="header__menu-container">
       <div class="header__menu-container__into">
@@ -49,7 +67,7 @@
       </div>
 
       <div class="technologies_container__image">
-        <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="launch-vehicle">
+        <img id="dynamic-image" src="assets/technology/image-launch-vehicle-landscape.jpg" alt="launch-vehicle">
       </div>
     </section>
   </main>

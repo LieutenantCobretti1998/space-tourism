@@ -89,6 +89,8 @@ body {
         .header__menu-container ul a .menu-number {
           padding-right: 0.5rem;
           font-weight: bold; }
+  .header .menu-overlay {
+    display: none; }
 
 main {
   position: relative;
@@ -167,3 +169,100 @@ main {
 .filled {
   background-color: #FFFFFF;
   color: #0B0D17; }
+
+@media screen and (max-width: 48em) {
+  body {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+    background-size: auto; }
+  html {
+    font-size: 38.25%; }
+  .header {
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0; }
+    .header__line-container {
+      display: none; }
+    .header__logo-container {
+      min-width: 4.8em;
+      height: auto; }
+    .header__menu-container {
+      margin-left: 5.5rem; }
+    .header__hamburger-menu {
+      display: none; }
+  main {
+    margin-top: 1.5rem;
+    gap: 5rem; }
+  .space_launch_header {
+    align-self: center;
+    word-spacing: 1rem;
+    justify-content: center;
+    display: flex;
+    transform: none; }
+    .space_launch_header > b {
+      padding-right: 2rem; }
+  .technologies_container {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-left: 0;
+    padding-top: 0; }
+    .technologies_container__numbers {
+      flex-direction: row; }
+    .technologies_container__image > img {
+      max-width: 45em; }
+    .technologies_container__description {
+      align-items: center; }
+      .technologies_container__description__text {
+        text-align: center;
+        padding: 2.5rem; } }
+
+@media screen and (max-width: 28.6em) {
+  body {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+    background-size: cover; }
+  html {
+    font-size: 31.25%; }
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-right: 3.5rem; }
+    .header__line-container {
+      display: none; }
+    .header__menu-container {
+      display: none; }
+    .header__logo-container {
+      min-width: 4.8em; }
+    .header__hamburger-menu {
+      align-self: center;
+      max-width: 3.5rem;
+      height: auto;
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      fill: #FFFFFF; }
+  main {
+    margin-top: 1.5rem;
+    gap: 5rem; }
+  .space_launch_header {
+    align-self: center;
+    word-spacing: 1rem;
+    justify-content: center;
+    display: flex;
+    transform: none; }
+    .space_launch_header > b {
+      padding-right: 2rem; }
+  .technologies_container {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-left: 0;
+    padding-top: 0; }
+    .technologies_container__numbers {
+      flex-direction: row; }
+    .technologies_container__image > img {
+      max-width: 45em; }
+    .technologies_container__description {
+      align-items: center; }
+      .technologies_container__description__text {
+        text-align: center;
+        padding: 2.5rem; } }

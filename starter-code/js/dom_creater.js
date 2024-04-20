@@ -1,5 +1,5 @@
 import anime from "../../node_modules/animejs/lib/anime.es.js";
-import stopDestinationsClicking from "./destinations.js";
+import { stopDestinationsClicking } from "./helpers.js";
 export default class TreeCreator {
     #destination_name
     #destination_image
