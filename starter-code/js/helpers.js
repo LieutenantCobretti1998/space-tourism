@@ -10,7 +10,7 @@ export function stopDestinationsClicking(pointer, cursor) {
 export  function DynamicImage() {
 
     const mobile_media_query = window.matchMedia("(max-width: 26.5em)");
-    const tablet_media_query = window.matchMedia("(max-width: 48em)");
+    const tablet_media_query = window.matchMedia("(max-width: 64em)");
 
     if (mobile_media_query.matches || tablet_media_query.matches) {
         return "landscape" ;

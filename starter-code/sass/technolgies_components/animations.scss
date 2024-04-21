@@ -1,0 +1,23 @@
+
+
+@keyframes expandMenuDiagonally {
+  from {
+    transform: translateX(100%) translateY(0%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes collapseMenuDiagonally {
+  from {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%) translateY(0%) scale(0);
+    opacity: 0;
+  }
+}

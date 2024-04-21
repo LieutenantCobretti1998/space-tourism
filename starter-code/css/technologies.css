@@ -1,3 +1,19 @@
+@keyframes expandMenuDiagonally {
+  from {
+    transform: translateX(100%) translateY(0%) scale(0);
+    opacity: 0; }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1; } }
+
+@keyframes collapseMenuDiagonally {
+  from {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1; }
+  to {
+    transform: translateX(100%) translateY(0%) scale(0);
+    opacity: 0; } }
+
 *,
 *::after,
 *::before {
@@ -94,7 +110,57 @@ body {
           padding-right: 0.5rem;
           font-weight: bold; }
   .header .menu-overlay {
-    display: none; }
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top right; }
+    .header .menu-overlay.active_menu {
+      display: flex;
+      animation: expandMenuDiagonally 1s forwards;
+      visibility: visible; }
+    .header .menu-overlay.closing_menu {
+      animation: collapseMenuDiagonally 1s forwards; }
+    .header .menu-overlay > nav > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3vh; }
+    .header .menu-overlay > nav > ul > li {
+      list-style: none;
+      font-size: 10.5vw; }
+      .header .menu-overlay > nav > ul > li > a {
+        text-decoration: none;
+        color: #FFFFFF; }
+        .header .menu-overlay > nav > ul > li > a:visited {
+          text-decoration: none; }
+      .header .menu-overlay > nav > ul > li {
+        transition: transform 0.8s ease; }
+        .header .menu-overlay > nav > ul > li:active {
+          transform: scale(0.9); }
+  .header .close_button {
+    position: fixed;
+    top: 5%;
+    right: 4%;
+    min-width: 10vw;
+    max-width: 15vw;
+    height: auto;
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    fill: #FFFFFF;
+    transition: transform 0.7s ease-out; }
+    .header .close_button:active {
+      transform: scale(0.8); }
 
 main {
   position: relative;

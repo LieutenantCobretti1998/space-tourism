@@ -45,5 +45,5 @@ nav_element.addEventListener("click", async (e)=> {
         const pageHandler = new PageHandler("./data.json", "destinations");
         await pageHandler.initDestination(destination_name);
     }
-
 });
+
