@@ -1,7 +1,9 @@
 @import "base/variables.scss";
 @import "base/base.scss";
+@import "common_components/hamburger_menu.scss";
 @import "destination_components/destinations_header";
 @import "destinations/base.scss";
 @import "destination_components/destination_body.scss";
 @import "destinations/animations.scss";
+@import "common_components/animations.scss";
 @import "destination_components/destinations_responsive.scss";
