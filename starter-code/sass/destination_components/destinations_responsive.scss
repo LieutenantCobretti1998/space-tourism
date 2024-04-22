@@ -40,6 +40,21 @@
     }
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    margin-top: 9.5vw;
+    position: sticky;
+  }
+
+  .pick_destination,
+  .destination{
+    position: static;
+  }
+
   .destination {
     flex-direction: column;
 
