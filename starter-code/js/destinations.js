@@ -1,5 +1,5 @@
 import PageHandler from "./init.js";
-import {stopDestinationsClicking} from "./helpers.js";
+import {stopDestinationsClicking, HamburgerMenu} from "./helpers.js";
 
 // Initial first loading animation
 function InitialAnimation() {
@@ -46,4 +46,8 @@ nav_element.addEventListener("click", async (e)=> {
         await pageHandler.initDestination(destination_name);
     }
 });
+
+// Hamburger Menu
+HamburgerMenu();
+
 

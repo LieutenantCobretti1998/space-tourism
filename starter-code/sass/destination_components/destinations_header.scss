@@ -31,10 +31,6 @@
   }
 
   &__line-container {
-    //margin-left: 11.2rem;
-    //width: 47.3rem;
-    //height: 0.1px; // A more typical height for a horizontal line
-    //background-color: black;
     position: absolute;
     left: 11.2rem; // Starts from the very left of the header
     right: 0; // Stretches to the very right of the header
@@ -48,7 +44,6 @@
   }
 
   &__menu-container {
-    //margin-left: 61rem;
     flex-grow: 2;
     margin-left: 44rem;
     display: flex;

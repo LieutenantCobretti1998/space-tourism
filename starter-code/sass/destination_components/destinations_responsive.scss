@@ -1,441 +1,64 @@
 // Small mobiles
 
-@media screen and (max-width: 23.4em) and (min-width: 15em) {
+@media screen and (max-width: 28.6em) {
   html {
-    font-size: 25.25%;
+    font-size: 31.25%;
   }
 
   body {
     background-image: url("../assets/destination/background-destination-mobile.jpg");
-  }
-
-
-  .destination {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    margin-top: 5rem;
-    position: static;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .section_pick {
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    margin-top: 15rem;
-  }
-
-  .pick_destination {
-    position: static;
-  }
-
-  .destination__places > ul {
-    gap: 1.5rem;
+    background-size: cover;
   }
 
   .header {
-    margin-left: 0;
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-right: 3.5rem;
+
+    &__line-container {
+      display: none;
+    }
+
+    &__menu-container {
+      display: none;
+    }
+
     &__logo-container {
-      display: none;
-
+      min-width: 4.8em;
     }
 
-    &__line-container {
-      display: none;
+    &__hamburger-menu {
+      align-self: center;
+      max-width: 3.5rem;
+      height: auto;
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      fill: $color-white;
     }
-
-    &__menu-container {
-      -webkit-justify-content: center;
-      justify-content: center;
-      margin-left: 0;
-    }
-
-    & ul {
-      padding-left: 4.4rem;
-      gap: 7.5rem;
-
-      > li > a > span {
-        font-size: 1.3rem;
-      }
-    }
-  }
-  .destination-highlight::after {
-    width: 5.2em !important;
-  }
-}
-
-// Medium Mobiles max 425 px
-@media screen and (max-width: 26.4em) and (min-width: 23.4em) {
-  html {
-    font-size: 30.25%;
-  }
-
-  body {
-    background-image: url("../assets/destination/background-destination-mobile.jpg");
-  }
-
-
-  .destination {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    margin-top: 5rem;
-    position: static;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .section_pick {
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    margin-top: 15rem;
-  }
-
-  .pick_destination {
-    position: static;
-  }
-
-  .destination__places > ul {
-    gap: 1.5rem;
-  }
-
-  .header {
-    margin-left: 0;
-    &__logo-container {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: none;
-
-    }
-
-    &__line-container {
-      display: none;
-    }
-
-    &__menu-container {
-      -webkit-justify-content: center;
-      justify-content: center;
-      margin-left: 0;
-    }
-
-    & ul {
-      padding-left: 5.5rem;
-      gap: 7.5rem;
-
-      > li > a > span {
-        font-size: 1.5rem;
-      }
-    }
-  }
-  .destination-highlight::after {
-    width: 7em !important;
-  }
-}
-
-
-
-// Tablets and large mobiles max 768 px
-
-@media only screen and (max-width: 47.999em) and (min-width: 26.5em) {
-  html {
-    font-size: 35.25%;
-  }
-
-  body {
-    background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
 
   .destination {
-    -webkit-flex-direction: column;
     flex-direction: column;
-    margin-top: 5rem;
-    position: static;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
 
-
-  .section_pick {
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15rem;
-  }
-
-  .pick_destination {
-    position: static;
-  }
-
-  .destination__places > ul {
-    gap: 1.5rem;
-  }
-
-  .header {
-    margin-left: 1rem;
-    &__logo-container {
-      //display: none;
-      width: 4.5rem;
-      height: 4.5rem;
-
+    &__image > img {
+      max-width: 45em;
     }
 
-    &__line-container {
-      display: none;
+    &__description {
+      align-items: center;
     }
 
-    &__menu-container {
-      -webkit-justify-content: center;
-      justify-content: center;
-      margin-left: 1.3rem;
+    &__name {
+      align-self: center;
     }
 
-    & ul {
-      padding-left: 6.5rem;
-      gap: 7.5rem;
-
-      > li > a > span {
-        font-size: 1.6rem;
-      }
+    &__text {
+      text-align: center;
     }
-  }
-  .destination-highlight::after {
-    width: 8em !important;
-  }
-}
-
-// Tablets max 1024px
-@media only screen and (max-width: 79em) and (min-width: 48em) {
-  html {
-    font-size: 40.25%;
-  }
-
-  body {
-    background-image: url("../assets/destination/background-destination-tablet.jpg");
-  }
-
-  .header {
-
-    &__line-container {
-      display: none;
-    }
-
-    &__menu-container {
-      justify-content: center;
-      margin-left: 5rem;
-    }
-
-    & ul {
-      padding-left: 11.5rem;
-      gap: 7.5rem;
-
-      > li > a > span {
-        font-size: 2.5rem;
-      }
-
-    }
-
-  }
-  .destination {
-    flex-direction: column;
-    margin-top: 5rem;
-    position: static;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .section_pick {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15rem;
-  }
-
-  .pick_destination {
-    position: static;
-  }
-
-  .destination__places > ul {
-    gap: 2.5rem;
-  }
-
-  .destination-highlight::after {
-    width: 9em !important;
   }
 }
 
 
-  // Small screens max 1600px and min 1280px
-  @media only screen and (min-width: 78.999em) and (max-width: 99.999em) {
-    html {
-      font-size: 45.25%;
-    }
-
-    .header {
-      &__logo-container {
-        width: 6.5rem;
-        height: 6.5rem;
-
-      }
-
-      &__line-container {
-        left: 10rem;
-        width: 13.5rem;
-      }
-
-      &__menu-container {
-        justify-content: start;
-        margin-left: 15rem
-      }
-
-      & ul {
-        padding-left: 7.5rem;
-        gap: 16.5rem;
-      }
-    }
-    .destination {
-      gap: 35rem;
-    }
-
-    .destination-highlight::after {
-      width: 8.2em !important;
-    }
-  }
-
-  // Medium screens max 2560px width and min 1920 px
-  @media only screen and (min-width: 100em) and (max-width: 159.999em) {
-    html {
-      font-size: 100%;
-    }
-
-    .header {
-      &__logo-container {
-        width: 7rem;
-        height: 7rem;
-
-      }
-
-      &__line-container {
-        width: 13.5rem;
-      }
-
-      &__menu-container {
-        justify-content: start;
-        margin-left: 15rem;
-      }
-
-      & ul {
-        padding-left: 11.5rem;
-        gap: 7.5rem;
-
-        > li > a > span {
-          font-size: 1.5rem;
-        }
-
-      }
-
-      .destination {
-        display: flex;
-        gap: 40rem;
-      }
-    }
-
-    .destination {
-      left: 10rem;
-    }
-
-    .destination-highlight::after {
-      width: 10.5em !important;
-    }
-  }
-  // large 2k screens
-  @media screen and (min-width: 160em) and (max-width: 187.5em) {
-    html {
-      font-size: 105%;
-    }
-    .header {
-      &__logo-container {
-        width: 7rem;
-        height: 7rem;
-
-      }
-
-      &__menu-container {
-        justify-content: start;
-      }
-
-      & ul {
-        padding-left: 11.5rem;
-        gap: 7.5rem;
-      }
-    }
-
-    .destination {
-      left: 10rem;
-    }
-    .destination-highlight::after {
-      width: 11em !important;
-    }
-
-  }
-
-  //Extra large screens 4k
-  @media only screen and (min-width: 187.6em) {
-    html {
-      font-size: 115%;
-    }
-
-    .header {
-      &__logo-container {
-        width: 5rem;
-        height: 5rem;
-
-      }
-
-      &__menu-container {
-        justify-content: start;
-      }
-
-      & ul {
-        padding-left: 11.5rem;
-        gap: 7.5rem;
-
-        > li > a > span {
-          font-size: 2.5rem;
-
-        }
-      }
-    }
-
-    .destination {
-      //top: 15rem;
-    }
-
-    .pick_destination {
-      top: 5.5rem;
-    }
-
-    .destination-highlight::after {
-      width: 12.5em !important;
-    }
-
-  }
-
-
-  // For 3840 X 2160
-  @media screen and (width: 240em) and (height: 135em) {
-    html {
-      font-size: 134%;
-    }
-  }
