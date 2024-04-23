@@ -1,5 +1,336 @@
-// Small mobiles
+// Extra large screens max 3840
+@media screen and (min-width: 160.1em) {
+  body {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
 
+  html {
+    font-size: 125%;
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 1.5vw;
+
+    &__line-container {
+      //left: 7rem;
+      min-width: 10vw;
+      max-width: 25vw;
+    }
+
+    &__menu-container {
+      margin-left: 10rem;
+      justify-content: center;
+    }
+
+    &__logo-container {
+      width: 7.5rem;
+      height: auto;
+      margin-right: 10.5rem;
+    }
+
+    .menu-overlay {
+      display: none;
+    }
+
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+
+  main {
+    gap: 3.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section_pick {
+    text-align: center;
+    position: static;
+  }
+
+
+  .pick_destination{
+    position: static;
+  }
+  .destination {
+    align-self: center;
+    position: sticky;
+  }
+}
+
+// Huge laptops
+@media screen and (max-width: 160em) {
+  body {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+
+  html {
+    font-size: 75%;
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 1.5vw;
+
+    &__line-container {
+      //left: 7rem;
+      min-width: 10vw;
+      max-width: 25vw;
+    }
+
+    &__menu-container {
+      margin-left: 10rem;
+      justify-content: center;
+    }
+
+    &__logo-container {
+      width: 7.5rem;
+      height: auto;
+      margin-right: 10.5rem;
+    }
+
+    .menu-overlay {
+      display: none;
+    }
+
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+
+  main {
+    gap: 3.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section_pick {
+    text-align: center;
+    position: static;
+  }
+
+
+  .pick_destination{
+    position: static;
+  }
+  .destination {
+    align-self: center;
+    position: sticky;
+  }
+}
+
+// Medium laptops
+@media  screen and (max-width: 100em) {
+  body {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 4.5vw;
+
+    &__line-container {
+      //left: 7rem;
+      min-width: 10vw;
+      max-width: 25vw;
+    }
+
+    &__menu-container {
+      margin-left: 10rem;
+      justify-content: center;
+    }
+
+    &__logo-container {
+      width: 7.5rem;
+      height: auto;
+      margin-right: 10.5rem;
+    }
+
+    .menu-overlay {
+      display: none;
+    }
+
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+
+  main {
+    gap: 3.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pick_destination {
+    position: sticky;
+  }
+
+  .destination {
+    align-self: center;
+    position: sticky;
+  }
+}
+
+// Big Tablets
+@media screen and (max-width: 64em) {
+  html {
+    font-size: 42%;
+  }
+
+  body {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+
+    &__logo-container {
+      min-width: 7.8em;
+      height: auto;
+    }
+
+    &__menu-container {
+      margin-left: 5.5rem;
+    }
+
+    &__line-container {
+      display: none;
+    }
+
+    .menu-overlay {
+      display: none;
+    }
+
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+    margin-top: 3.5vw;
+    position: sticky;
+  }
+
+  .pick_destination,
+  .destination{
+    position: static;
+  }
+
+  .destination {
+    flex-direction: column;
+
+    &__image > img {
+      max-width: 45em;
+    }
+
+    &__description {
+      align-items: center;
+    }
+
+    &__name {
+      align-self: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+}
+
+// Tablets
+@media screen and (max-width: 53.125em) {
+  html {
+    font-size: 38.25%;
+  }
+
+  body {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+
+    &__logo-container {
+      min-width: 6.8em;
+      height: auto;
+    }
+
+    &__menu-container {
+      margin-left: 5.5rem;
+    }
+
+    &__line-container {
+      display: none;
+    }
+
+    .menu-overlay {
+      display: none;
+    }
+
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin-top: 5.5vw;
+    position: sticky;
+  }
+
+  .pick_destination,
+  .destination{
+    position: static;
+  }
+
+  .destination {
+    flex-direction: column;
+
+    &__image > img {
+      max-width: 45em;
+    }
+
+    &__description {
+      align-items: center;
+    }
+
+    &__name {
+      align-self: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+}
+
+
+
+//mobiles
 @media screen and (max-width: 28.6em) {
   html {
     font-size: 31.25%;
@@ -25,7 +356,7 @@
     }
 
     &__logo-container {
-      min-width: 4.8em;
+      min-width: 6em;
     }
 
     &__hamburger-menu {

@@ -3,9 +3,10 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
+  margin: 0;
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -274,7 +275,7 @@ main {
   body {
     background-image: url("../assets/technology/background-technology-desktop.jpg"); }
   html {
-    font-size: 85%; }
+    font-size: 75%; }
   .header {
     margin-top: 1.1rem;
     margin-left: 1.5rem;
@@ -444,7 +445,7 @@ main {
       cursor: pointer;
       fill: #FFFFFF; }
   main {
-    margin-top: 1.5rem;
+    margin-top: 12vh;
     gap: 5rem; }
   .space_launch_header {
     align-self: center;
