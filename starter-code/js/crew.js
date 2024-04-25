@@ -1,5 +1,6 @@
 import PageHandler from "./init.js";
 import anime from "../../node_modules/animejs/lib/anime.es.js";
+import {HamburgerMenu} from "./helpers.js";
 
 // Main animation init
 
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     anime({
         targets: ".crew_information__profession, .crew_information__text, .crew_information__name",
         keyframes: [
-            { translateY: [75, 0], opacity: [0, 1] }
+            { translateY: [75, -10], opacity: [0, 1] }
         ],
         duration: 2000,
         easing: "easeOutElastic(1, .8)"
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     anime({
         targets: ".crew-image",
         keyframes: [
-            { translateY: [75, 70], opacity: [0, 1] }
+            { translateY: [75, -10], opacity: [0, 1] }
         ],
         duration: 2000,
         easing: "easeOutElastic(1, .8)"
@@ -35,3 +36,6 @@ dots.forEach((dot, index) => {
         }
     })
 })
+
+// Hamburger Menu
+HamburgerMenu();

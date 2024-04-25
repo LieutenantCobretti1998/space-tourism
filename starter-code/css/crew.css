@@ -3,9 +3,10 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
+  margin: 0;
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,6 +26,66 @@ body {
   object-fit: cover;
   background-image: url("../assets/crew/background-crew-desktop.jpg"); }
 
+.header .menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top right; }
+  .header .menu-overlay.active_menu {
+    display: flex;
+    animation: expandMenuDiagonally 1s forwards;
+    visibility: visible; }
+  .header .menu-overlay.closing_menu {
+    animation: collapseMenuDiagonally 1s forwards; }
+  .header .menu-overlay > nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh; }
+  .header .menu-overlay > nav > ul > li {
+    list-style: none;
+    font-size: 10.5vw; }
+    .header .menu-overlay > nav > ul > li > a {
+      text-decoration: none;
+      color: #FFFFFF; }
+      .header .menu-overlay > nav > ul > li > a:visited {
+        text-decoration: none; }
+    .header .menu-overlay > nav > ul > li {
+      transition: transform 0.8s ease; }
+      .header .menu-overlay > nav > ul > li:active {
+        transform: scale(0.9); }
+
+.header .close_button {
+  position: fixed;
+  top: 5%;
+  right: 4%;
+  min-width: 10vw;
+  max-width: 15vw;
+  height: auto;
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  fill: #FFFFFF;
+  transition: transform 0.7s ease-out; }
+  .header .close_button:active {
+    transform: scale(0.8); }
+
+.header .crew_header {
+  transform: none; }
+
+.header .crew_information {
+  display: none; }
+
 .header {
   display: flex;
   align-items: center;
@@ -37,10 +98,10 @@ body {
       max-width: 100%;
       min-width: 100%;
       display: block; }
-  .header .crew-highlight::after {
+  .header .destination-highlight::after {
     content: "";
     display: block;
-    width: 6.5rem;
+    width: 10.2rem;
     height: .3rem;
     background-color: #FFFFFF;
     margin-top: 1.5rem; }
@@ -76,6 +137,7 @@ body {
       display: flex;
       gap: 6.5rem; }
       .header__menu-container ul a {
+        display: inline-block;
         font-size: 1.6rem;
         font-family: "Barlow Condensed", sans-serif;
         text-decoration: none;
@@ -83,7 +145,8 @@ body {
         transition: all 0.3s; }
         .header__menu-container ul a:hover {
           color: #F2613F;
-          font-size: 2rem; }
+          transform: scale(1.3);
+          transform-origin: center; }
         .header__menu-container ul a .menu-name {
           font-weight: normal; }
         .header__menu-container ul a .menu-number {
@@ -157,252 +220,245 @@ main {
     cursor: pointer;
     background-color: #F2613F; }
 
-@media only screen and (max-width: 26.875em) and (orientation: portrait) {
+@keyframes expandMenuDiagonally {
+  from {
+    transform: translateX(100%) translateY(0%) scale(0);
+    opacity: 0; }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1; } }
+
+@keyframes collapseMenuDiagonally {
+  from {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1; }
+  to {
+    transform: translateX(100%) translateY(0%) scale(0);
+    opacity: 0; } }
+
+@media screen and (max-width: 100em) {
   body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-mobile.jpg"); }
+    background-image: url("../assets/crew/background-crew-desktop.jpg"); }
   html {
-    font-size: 30.25%; }
-  .header__logo-container {
-    width: 7.5rem;
-    height: 6.5rem; }
-  .header__line-container {
-    display: none;
-    left: 10rem;
-    width: 45rem; }
-  .header__menu-container {
-    justify-content: flex-start;
-    margin-left: 5rem; }
-  .header ul {
-    padding-left: 2.5rem;
-    gap: 6.5rem; }
-  .crew_header {
-    transform: translate(22rem, 15rem); }
-  .crew_information {
-    align-items: center;
-    margin-top: 1.5rem;
-    flex-direction: column-reverse;
-    gap: 15rem;
-    margin-left: 0; }
-  .crew_information__description {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 4.5rem; }
-  .crew_information__profession {
-    order: 1; }
-  .crew_information__name {
-    order: 2; }
-  .slider-dots {
-    z-index: 5000;
-    order: 3; }
-  .crew_information__text {
-    font-size: 2rem; }
-  .crew_information__profession,
-  .crew_information__name {
-    text-align: center; }
-  .crew-image {
-    align-self: center;
-    width: 50vw !important;
-    height: 45vh !important; } }
-
-@media only screen and (max-width: 30em) and (min-width: 26.875em) and (orientation: portrait) {
-  body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-mobile.jpg"); }
-  html {
-    font-size: 35.25%; }
-  .header__logo-container {
-    width: 6.5rem;
-    height: 6.5rem; }
-  .header__line-container {
-    display: none;
-    left: 10rem;
-    width: 45rem; }
-  .header__menu-container {
-    justify-content: flex-start;
-    margin-left: 5rem; }
-  .header ul {
-    padding-left: 2.5rem;
-    gap: 6.5rem; }
-  .header ul li > a > span {
-    font-size: 1.7rem; }
-  .crew_header {
-    transform: translate(22rem, 5em); }
-  .crew_information {
-    align-items: center;
-    margin-top: 1.5rem;
-    flex-direction: column-reverse;
-    gap: 15.5rem;
-    margin-left: 0; }
-  .crew_information__description {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 4.5rem; }
-  .crew_information__profession {
-    order: 1; }
-  .crew_information__name {
-    order: 2; }
-  .slider-dots {
-    z-index: 5000;
-    order: 3; }
-  .crew_information__text {
-    font-size: 2rem; }
-  .crew_information__profession,
-  .crew_information__name {
-    text-align: center; }
-  .crew-image {
-    align-self: center;
-    width: 50vw !important;
-    height: 45vh !important; } }
-
-@media only screen and (max-width: 48em) and (min-width: 30em) {
-  body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-tablet.jpg"); }
-  html {
-    font-size: 41.25%; }
-  .header__logo-container {
-    width: 6.5rem;
-    height: 6.5rem; }
-  .header__line-container {
-    display: none;
-    left: 10rem;
-    width: 45rem; }
-  .header__menu-container {
-    justify-content: flex-start;
-    margin-left: 5rem; }
-  .header ul {
-    padding-left: 2.5rem;
-    gap: 6.5rem; }
-  .crew_header {
-    transform: translate(10rem, 1em); }
-  .crew_information {
-    margin-top: 6rem;
-    flex-direction: column;
-    gap: 0;
-    margin-left: 0; }
-  .crew_information__profession,
-  .crew_information__name {
-    text-align: center; }
-  .crew-image {
-    width: 50vw !important;
-    height: 40vh !important; } }
-
-@media only screen and (max-width: 79em) and (min-width: 48em) {
-  body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-tablet.jpg"); }
-  html {
-    font-size: 56.25%; }
-  .header__logo-container {
-    width: 4.5rem;
-    height: 4.5rem; }
-  .header__line-container {
-    display: none;
-    left: 10rem;
-    width: 45rem; }
-  .header__menu-container {
-    justify-content: flex-start;
-    margin-left: 10rem; }
-  .header ul {
-    padding-left: 7.5rem;
-    gap: 6.5rem; }
-  .crew_header {
-    transform: translate(10rem, 1em); }
-  .crew_information {
-    margin-top: 6rem;
-    flex-direction: column;
-    gap: 0;
-    margin-left: 0; }
-  .crew_information__profession,
-  .crew_information__name {
-    text-align: center; }
-  .crew-image {
-    width: 40vw !important;
-    height: 31vh !important; } }
-
-@media only screen and (min-width: 80em) and (max-width: 99em) {
-  html {
-    font-size: 60%; }
-  .header__logo-container {
-    width: 6.5rem;
-    height: 6.5rem; }
-  .header__line-container {
-    left: 10rem;
-    width: 25rem; }
-  .header__menu-container {
-    justify-content: start;
-    margin-left: 25rem; }
-  .header ul {
-    padding-left: 7.5rem;
-    gap: 6.5rem; }
-  .crew-highlight::after {
-    width: 6.6rem; }
-  .crew-image {
-    width: 23.5vw !important;
-    height: 72.5vh !important; }
-  .crew_header {
-    transform: translate(10rem, 5rem); } }
-
-@media only screen and (min-width: 100em) and (max-width: 160em) {
-  html {
-    font-size: 80%; }
+    font-size: 50%; }
   .header {
-    min-width: 10rem; }
-    .header__logo-container {
-      width: 6.5rem;
-      height: 6.5rem; }
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 4.5vw; }
     .header__line-container {
-      left: 10rem;
-      width: 25rem; }
+      min-width: 10vw;
+      max-width: 25vw; }
     .header__menu-container {
-      justify-content: start;
-      margin-left: 25rem; }
-    .header ul {
-      padding-left: 5.5rem;
-      gap: 6.5rem; }
-  .crew-highlight::after {
-    width: 6.6rem; }
+      margin-left: 10rem;
+      justify-content: center; }
+    .header__logo-container {
+      width: 7.5rem;
+      height: auto;
+      margin-right: 10.5rem; }
+    .header .menu-overlay {
+      display: none; }
+    .header__hamburger-menu {
+      display: none; }
   .crew-image {
-    width: 23.5vw !important;
-    height: 72.5vh !important; }
-  .crew_header {
-    transform: translate(10rem, 5rem); } }
+    width: 30vw !important;
+    height: 60vh !important; } }
 
-@media only screen and (min-width: 160em) and (max-width: 187.5em) {
+@media screen and (max-width: 64em) and (orientation: portrait) {
   html {
-    font-size: 105%; }
-  .header__logo-container {
-    width: 7rem;
-    height: 7rem; }
-  .header__menu-container {
-    justify-content: start; }
-  .header ul {
-    padding-left: 11.5rem;
-    gap: 7.5rem; }
-  .crew-highlight::after {
-    width: 6.6rem; }
-  .crew-image {
-    width: 22vw !important;
-    height: 73vh !important; }
+    font-size: 42%; }
+  body {
+    background-image: url("../assets/crew/background-crew-tablet.jpg"); }
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-bottom: 10rem; }
+    .header__logo-container {
+      min-width: 6.8em;
+      height: auto; }
+    .header__menu-container {
+      margin-left: 35vw; }
+    .header__line-container {
+      display: block; }
+    .header .menu-overlay {
+      display: none; }
+    .header__hamburger-menu {
+      display: none; }
+  .crew_information {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 0; }
+    .crew_information__description {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 1.2rem;
+      flex-direction: column; }
   .crew_header {
-    transform: translate(10rem, 5rem); } }
+    transform: none; }
+  .crew-image {
+    align-self: center;
+    width: 46vw !important;
+    height: 50vh !important; }
+  .meet_crew {
+    align-self: start; }
+  main {
+    gap: 0; } }
 
-@media only screen and (min-width: 187.5em) {
+@media screen and (max-width: 64em) and (orientation: landscape) {
   html {
-    font-size: 115%; }
-  .header__logo-container {
-    width: 7rem;
-    height: 7rem; }
-  .header__menu-container {
-    justify-content: start; }
-  .header ul {
-    padding-left: 11.5rem;
-    gap: 7.5rem; }
-  .crew-highlight::after {
-    width: 6.6rem; }
-  .crew-image {
-    width: 23vw !important;
-    height: 75.4vh !important; }
+    font-size: 42%; }
+  body {
+    background-image: url("../assets/crew/background-crew-tablet.jpg"); }
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-bottom: 2.5rem; }
+    .header__logo-container {
+      min-width: 6.8em;
+      height: auto; }
+    .header__menu-container {
+      margin-left: 35vw; }
+    .header__line-container {
+      display: block; }
+    .header .menu-overlay {
+      display: none; }
+    .header__hamburger-menu {
+      display: none; } }
+
+@media screen and (max-width: 53.125em) and (orientation: landscape) {
+  html {
+    font-size: 38.25%; }
+  body {
+    background-image: url("../assets/crew/background-crew-tablet.jpg"); }
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-bottom: 2.5rem; }
+    .header__logo-container {
+      min-width: 6.8em;
+      height: auto; }
+    .header__menu-container {
+      margin-left: 5.5rem; }
+    .header__line-container {
+      display: none; }
+    .header .menu-overlay {
+      display: none; }
+    .header__hamburger-menu {
+      display: none; }
+  .crew_information {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 0; }
+    .crew_information__description {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 1.2rem;
+      flex-direction: column; }
   .crew_header {
-    transform: translate(10rem, 5rem); } }
+    transform: none; }
+  .crew-image {
+    align-self: center;
+    width: 46vw !important;
+    height: 50vh !important; }
+  .meet_crew {
+    align-self: start; }
+  main {
+    gap: 0; } }
+
+@media screen and (max-width: 53.125em) and (orientation: portrait) {
+  html {
+    font-size: 38.25%; }
+  body {
+    background-image: url("../assets/crew/background-crew-tablet.jpg"); }
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-bottom: 10rem; }
+    .header__logo-container {
+      min-width: 6.8em;
+      height: auto; }
+    .header__menu-container {
+      margin-left: 5.5rem; }
+    .header__line-container {
+      display: none; }
+    .header .menu-overlay {
+      display: none; }
+    .header__hamburger-menu {
+      display: none; }
+  .crew_information {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 0; }
+    .crew_information__description {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+      flex-direction: column; }
+  .crew_header {
+    transform: none; }
+  .crew-image {
+    align-self: center;
+    width: 46vw !important;
+    height: 50vh !important; }
+  .meet_crew {
+    align-self: start;
+    margin-bottom: 5vw; }
+  main {
+    gap: 0; } }
+
+@media screen and (max-width: 28.6em) {
+  html {
+    font-size: 31.25%; }
+  body {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+    background-size: cover; }
+  .header {
+    margin-top: 1.1rem;
+    justify-content: space-between;
+    margin-left: 1.3rem;
+    margin-right: 3.5rem;
+    margin-bottom: 3.5rem; }
+    .header__line-container {
+      display: none; }
+    .header__menu-container {
+      display: none; }
+    .header__logo-container {
+      min-width: 6em; }
+    .header__hamburger-menu {
+      align-self: center;
+      max-width: 3.5rem;
+      height: auto;
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      fill: #FFFFFF; }
+  .crew_information {
+    flex-direction: column-reverse;
+    margin-left: 0;
+    gap: 0; }
+    .crew_information__description {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 3vh;
+      flex-direction: column-reverse; }
+  .crew_header {
+    transform: none; }
+  .crew-image {
+    align-self: center;
+    min-width: 60vw !important;
+    min-height: 50vh !important; }
+  .meet_crew {
+    align-self: center; }
+  .slider-dots {
+    margin-top: 0; }
+  main {
+    gap: 0; } }

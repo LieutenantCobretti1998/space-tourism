@@ -1,455 +1,385 @@
-// small mobile devices
-@media only screen and (max-width: 26.875em) and (orientation: portrait) {
+// Medium Laptops
+@media screen and (max-width: 100em) {
   body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-mobile.jpg");
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
   }
 
   html {
-    font-size: 30.25%;
+    font-size: 50%;
   }
 
-
   .header {
-    //margin-left: 0;
+    margin-top: 1.1rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 4.5vw;
+
+    &__line-container {
+      min-width: 10vw;
+      max-width: 25vw;
+    }
+
+    &__menu-container {
+      margin-left: 10rem;
+      justify-content: center;
+    }
+
     &__logo-container {
       width: 7.5rem;
-      height: 6.5rem;
-
+      height: auto;
+      margin-right: 10.5rem;
     }
 
-    &__line-container {
+    .menu-overlay {
       display: none;
-      left: 10rem;
-      width: 45rem;
     }
 
-    &__menu-container {
-      justify-content: flex-start;
-      margin-left: 5rem;
-    }
-
-    & ul {
-      padding-left: 2.5rem;
-      gap: 6.5rem;
-    }
-
-    & ul li > a > span {
-      //font-size: 1.7rem;
-    }
-
-  }
-
-  .crew_header {
-    transform: translate(22rem, 15rem);
-  }
-
-  .crew_information {
-    align-items: center;
-    margin-top: 1.5rem;
-    flex-direction: column-reverse;
-    gap: 15rem;
-    margin-left: 0;
-  }
-
-  .crew_information__description {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 4.5rem;
-  }
-
-  .crew_information__profession {
-    order: 1;
-  }
-
-  .crew_information__name {
-    order: 2;
-  }
-
-  .slider-dots {
-    z-index: 5000;
-    order: 3;
-  }
-
-  .crew_information__text {
-    font-size: 2rem;
-  }
-
-  .crew_information__profession,
-  .crew_information__name{
-    text-align: center;
-  }
-
-  .crew-image {
-    align-self: center;
-    width: 50vw !important;
-    height: 45vh !important;
-  }
-}
-
-
-
-
-// Mobile devices
-@media only screen and (max-width: 30em) and (min-width: 26.875em) and (orientation: portrait)  {
-  body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-mobile.jpg");
-  }
-
-  html {
-    font-size: 35.25%;
-  }
-
-  .header {
-    &__logo-container {
-      width: 6.5rem;
-      height: 6.5rem;
-
-    }
-
-    &__line-container {
+    &__hamburger-menu {
       display: none;
-      left: 10rem;
-      width: 45rem;
     }
-
-    &__menu-container {
-      justify-content: flex-start;
-      margin-left: 5rem;
-    }
-
-    & ul {
-      padding-left: 2.5rem;
-      gap: 6.5rem;
-    }
-
-    & ul li > a > span {
-      font-size: 1.7rem;
-    }
-  }
-
-  .crew_header {
-    transform: translate(22rem, 5em);
-  }
-
-  .crew_information {
-    align-items: center;
-    margin-top: 1.5rem;
-    flex-direction: column-reverse;
-    gap: 15.5rem;
-    margin-left: 0;
-  }
-
-  .crew_information__description {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 4.5rem;
-  }
-
-  .crew_information__profession {
-    order: 1;
-  }
-
-  .crew_information__name {
-    order: 2;
-  }
-
-  .slider-dots {
-    z-index: 5000;
-    order: 3;
-  }
-
-  .crew_information__text {
-    font-size: 2rem;
-  }
-
-  .crew_information__profession,
-  .crew_information__name{
-    text-align: center;
   }
 
   .crew-image {
-    align-self: center;
-    width: 50vw !important;
-    height: 45vh !important;
+    width: 30vw !important;
+    height: 60vh !important;
   }
 }
 
-// Tablets 768px
-@media only screen and (max-width: 48em) and (min-width: 30em) {
-  body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-tablet.jpg");
-  }
-
-  html {
-    font-size: 41.25%;
-  }
-
-  .header {
-    &__logo-container {
-      width: 6.5rem;
-      height: 6.5rem;
-
+  // Medium Tablets and small laptops in portrait
+  @media screen and (max-width: 64em) and (orientation: portrait) {
+    html {
+      font-size: 42%;
     }
 
-    &__line-container {
-      display: none;
-      left: 10rem;
-      width: 45rem;
+    body {
+      background-image: url("../assets/crew/background-crew-tablet.jpg");
     }
 
-    &__menu-container {
-      justify-content: flex-start;
-      margin-left: 5rem;
-    }
+    .header {
+      margin-top: 1.1rem;
+      justify-content: space-between;
+      margin-left: 1.3rem;
+      margin-bottom: 10rem;
 
-    & ul {
-      padding-left: 2.5rem;
-      gap: 6.5rem;
-    }
-  }
-
-  .crew_header {
-    transform: translate(10rem, 1em);
-  }
-
-  .crew_information {
-    margin-top: 6rem;
-    flex-direction: column;
-    gap: 0;
-    margin-left: 0;
-  }
-  .crew_information__profession,
-  .crew_information__name{
-    text-align: center;
-  }
-
-  .crew-image {
-    width: 50vw !important;
-    height: 40vh !important;
-  }
-}
-
-// Tablets max 1024px
-
-
-@media only screen and (max-width: 79em) and (min-width: 48em) {
-  body {
-    object-fit: cover;
-    background-image: url("../assets/crew/background-crew-tablet.jpg");
-  }
-
-  html {
-    font-size: 56.25%;
-  }
-
-  .header {
-    &__logo-container {
-      width: 4.5rem;
-      height: 4.5rem;
-
-    }
-
-    &__line-container {
-      display: none;
-      left: 10rem;
-      width: 45rem;
-    }
-
-    &__menu-container {
-      justify-content: flex-start;
-      margin-left: 10rem;
-    }
-
-    & ul {
-      padding-left: 7.5rem;
-      gap: 6.5rem;
-    }
-  }
-
-  .crew_header {
-    transform: translate(10rem, 1em);
-  }
-
-  .crew_information {
-    margin-top: 6rem;
-    flex-direction: column;
-    gap: 0;
-    margin-left: 0;
-  }
-  .crew_information__profession,
-  .crew_information__name{
-    text-align: center;
-  }
-
-  .crew-image {
-    width: 40vw !important;
-    height: 31vh !important;
-  }
-}
-
-
-
-// Small screens max 1600px and min 1280px
-@media only screen and (min-width: 80em) and (max-width: 99em) {
-  html {
-    font-size: 60%;
-  }
-
-  .header {
-    &__logo-container  {
-      width: 6.5rem;
-      height: 6.5rem;
-
-    }
-
-    &__line-container {
-      left: 10rem;
-      width: 25rem;
-    }
-
-    &__menu-container {
-      justify-content: start;
-      margin-left: 25rem
-    }
-
-    & ul {
-      padding-left: 7.5rem;
-      gap: 6.5rem;
-    }
-  }
-
-  .crew-highlight::after {
-    width:6.6rem;
-  }
-
-  .crew-image {
-    width: 23.5vw !important;
-    height: 72.5vh !important;
-  }
-
-  .crew_header {
-    transform: translate(10rem, 5rem);
-  }
-}
-
-// Medium screens max 2560px width and min 1920 px
-
-@media only screen and (min-width: 100em) and (max-width: 160em) {
-  html {
-    font-size: 80%;
-  }
-
-  .header {
-    min-width: 10rem;
-    &__logo-container  {
-      width: 6.5rem;
-      height: 6.5rem;
-
-    }
-
-    &__line-container {
-      left: 10rem;
-      width: 25rem;
-    }
-
-    &__menu-container {
-      justify-content: start;
-      margin-left: 25rem
-    }
-
-    & ul {
-      padding-left: 5.5rem;
-      gap: 6.5rem;
-    }
-  }
-
-  .crew-highlight::after {
-    width:6.6rem;
-  }
-
-  .crew-image {
-    width: 23.5vw !important;
-    height: 72.5vh !important;
-  }
-
-  .crew_header {
-    transform: translate(10rem, 5rem);
-  }
-}
-
-
-// large 2k screens
-@media only screen and (min-width : 160em) and (max-width : 187.5em) {
-  html {
-    font-size: 105%;
-  }
-  .header {
-      &__logo-container  {
-        width: 7rem;
-        height: 7rem;
-
+      &__logo-container {
+        min-width: 6.8em;
+        height: auto;
       }
-    &__menu-container {
-      justify-content: start;
+
+      &__menu-container {
+        margin-left: 35vw;
+      }
+
+      &__line-container {
+        display: block;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+
+      &__hamburger-menu {
+        display: none;
+      }
     }
 
-    & ul {
-      padding-left: 11.5rem;
-      gap: 7.5rem;
+    .crew_information {
+      flex-direction: column;
+      margin-left: 0;
+      gap: 0;
+
+      &__description {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 1.2rem;
+        flex-direction: column;
+      }
+
+    }
+
+    .crew_header {
+      transform: none;
+    }
+
+    .crew-image {
+      align-self: center;
+      width: 46vw !important;
+      height: 50vh !important;
+    }
+
+    .meet_crew {
+      align-self: start;
+    }
+
+    main {
+      gap: 0;
     }
   }
 
-  .crew-highlight::after {
-    width:6.6rem;
-  }
 
-  .crew-image {
-    width: 22vw !important;
-    height: 73vh !important;
-  }
+  // Medium Tablets and small laptops in landscape
+  @media screen and (max-width: 64em) and (orientation: landscape) {
 
-  .crew_header {
-    transform: translate(10rem, 5rem);
-  }
-
-}
-
-// Extra large screens - 4k
-
-@media only screen and (min-width : 187.5em) {
-  html {
-    font-size: 115%;
-  }
-
-  .header {
-    &__logo-container  {
-      width: 7rem;
-      height: 7rem;
-
-    }
-    &__menu-container {
-      justify-content: start;
+    html {
+      font-size: 42%;
     }
 
-    & ul {
-      padding-left: 11.5rem;
-      gap: 7.5rem;
+    body {
+      background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+
+    .header {
+      margin-top: 1.1rem;
+      justify-content: space-between;
+      margin-left: 1.3rem;
+      margin-bottom: 2.5rem;
+
+      &__logo-container {
+        min-width: 6.8em;
+        height: auto;
+      }
+
+      &__menu-container {
+        margin-left: 35vw;
+      }
+
+      &__line-container {
+        display: block;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+
+      &__hamburger-menu {
+        display: none;
+      }
+    }
+
+  }
+
+  // Tablets in landscape
+  @media screen and (max-width: 53.125em) and (orientation: landscape) {
+    html {
+      font-size: 38.25%;
+    }
+
+    body {
+      background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+
+    .header {
+      margin-top: 1.1rem;
+      justify-content: space-between;
+      margin-left: 1.3rem;
+      margin-bottom: 2.5rem;
+
+      &__logo-container {
+        min-width: 6.8em;
+        height: auto;
+      }
+
+      &__menu-container {
+        margin-left: 5.5rem;
+      }
+
+      &__line-container {
+        display: none;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+
+      &__hamburger-menu {
+        display: none;
+      }
+    }
+
+    .crew_information {
+      flex-direction: column;
+      margin-left: 0;
+      gap: 0;
+
+      &__description {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 1.2rem;
+        flex-direction: column;
+      }
+
+    }
+
+    .crew_header {
+      transform: none;
+    }
+
+    .crew-image {
+      align-self: center;
+      width: 46vw !important;
+      height: 50vh !important;
+    }
+
+    .meet_crew {
+      align-self: start;
+    }
+
+    main {
+      gap: 0;
     }
   }
 
-  .crew-highlight::after {
-    width:6.6rem;
+  // Tablets
+  @media screen and (max-width: 53.125em) and (orientation: portrait) {
+    html {
+      font-size: 38.25%;
+    }
+
+    body {
+      background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+
+    .header {
+      margin-top: 1.1rem;
+      justify-content: space-between;
+      margin-left: 1.3rem;
+      margin-bottom: 10rem;
+
+      &__logo-container {
+        min-width: 6.8em;
+        height: auto;
+      }
+
+      &__menu-container {
+        margin-left: 5.5rem;
+      }
+
+      &__line-container {
+        display: none;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+
+      &__hamburger-menu {
+        display: none;
+      }
+    }
+
+    .crew_information {
+      flex-direction: column;
+      margin-left: 0;
+      gap: 0;
+
+      &__description {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+      }
+
+    }
+
+    .crew_header {
+      transform: none;
+    }
+
+    .crew-image {
+      align-self: center;
+      width: 46vw !important;
+      height: 50vh !important;
+    }
+
+    .meet_crew {
+      align-self: start;
+      margin-bottom: 5vw;
+    }
+
+    main {
+      gap: 0;
+    }
   }
 
-  .crew-image {
-    width: 23vw !important;
-    height: 75.4vh !important;
-  }
+  // Mobile phones
+  @media screen and (max-width: 28.6em) {
+    html {
+      font-size: 31.25%;
+    }
 
-  .crew_header {
-    transform: translate(10rem, 5rem);
+    body {
+      background-image: url("../assets/crew/background-crew-mobile.jpg");
+      background-size: cover;
+    }
+
+    .header {
+      margin-top: 1.1rem;
+      justify-content: space-between;
+      margin-left: 1.3rem;
+      margin-right: 3.5rem;
+      margin-bottom: 3.5rem;
+
+      &__line-container {
+        display: none;
+      }
+
+      &__menu-container {
+        display: none;
+      }
+
+      &__logo-container {
+        min-width: 6em;
+      }
+
+      &__hamburger-menu {
+        align-self: center;
+        max-width: 3.5rem;
+        height: auto;
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        fill: $color-white;
+      }
+    }
+
+    .crew_information {
+      flex-direction: column-reverse;
+      margin-left: 0;
+      gap: 0;
+
+      &__description {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 3vh;
+        flex-direction: column-reverse;
+      }
+
+    }
+
+    .crew_header {
+      transform: none;
+    }
+
+    .crew-image {
+      align-self: center;
+      min-width: 60vw !important;
+      min-height: 50vh !important;
+    }
+
+    .meet_crew {
+      align-self: center;
+    }
+
+    .slider-dots {
+      margin-top: 0;
+    }
+
+    main {
+      gap: 0;
+    }
   }
-}
