@@ -45,7 +45,7 @@ body {
   .header .technology-highlight::after {
     content: "";
     display: block;
-    width: 11rem;
+    width: 100%;
     height: .3rem;
     background-color: #FFFFFF;
     margin-top: 1.5rem; }
@@ -243,6 +243,12 @@ main {
   .header .close_button:active {
     transform: scale(0.8); }
 
+.header .crew_header {
+  transform: none; }
+
+.header .crew_information {
+  display: none; }
+
 @media screen and (min-width: 160.1em) {
   html {
     font-size: 125%; }
@@ -331,7 +337,7 @@ main {
   body {
     background-image: url("../assets/technology/background-technology-tablet.jpg"); }
   html {
-    font-size: 48.5%; }
+    font-size: 49.5%; }
   .header {
     margin-top: 1.1rem;
     margin-left: 1.5rem;
