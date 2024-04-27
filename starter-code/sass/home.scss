@@ -1,5 +1,7 @@
 @import "base/variables.scss";
-@import "base/typography.scss";
 @import "base/base.scss";
+@import "common_components/hamburger_menu.scss";
 @import "home_components/home_header.scss";
 @import "home_components/home_body.scss";
+@import "common_components/animations.scss";
+@import "home_components/home_responsive.scss";
