@@ -54,9 +54,10 @@
       font-family: $belleFair;
       text-transform: uppercase;
       text-decoration: none;
+      transition: transform .5s ease-in;
 
-      &:hover {
-
+      &:active {
+        transform: scale(0.9);
       }
     }
   }

@@ -191,7 +191,10 @@ body {
       letter-spacing: .2rem;
       font-family: "Bellefair", sans-serif;
       text-transform: uppercase;
-      text-decoration: none; }
+      text-decoration: none;
+      transition: transform .5s ease-in; }
+      .main-part .explore__button:active {
+        transform: scale(0.9); }
 
 @keyframes expandMenuDiagonally {
   from {

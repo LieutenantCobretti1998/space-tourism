@@ -411,8 +411,9 @@ main {
   .crew_header {
     transform: none; }
   .crew-image {
+    margin-top: 1.8rem;
     align-self: center;
-    width: 46vw !important;
+    width: 45vw !important;
     height: 50vh !important; }
   .meet_crew {
     align-self: start; }
