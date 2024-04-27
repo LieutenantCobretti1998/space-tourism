@@ -241,6 +241,10 @@
       max-width: 45em;
     }
 
+    &__image {
+      align-self: center;
+    }
+
     &__description {
       align-items: center;
     }
@@ -250,7 +254,12 @@
     }
 
     &__text {
+      line-break: auto;
       text-align: center;
+    }
+
+    &__places > ul {
+      gap: 1.5vw;
     }
   }
 }

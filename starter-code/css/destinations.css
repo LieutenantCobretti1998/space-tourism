@@ -76,6 +76,12 @@ body {
   .header .close_button:active {
     transform: scale(0.8); }
 
+.header .crew_header {
+  transform: none; }
+
+.header .crew_information {
+  display: none; }
+
 .header {
   display: flex;
   align-items: center;
@@ -91,7 +97,7 @@ body {
   .header .destination-highlight::after {
     content: "";
     display: block;
-    width: 10.2rem;
+    width: 100%;
     height: .3rem;
     background-color: #FFFFFF;
     margin-top: 1.5rem; }
@@ -451,12 +457,17 @@ main {
     flex-direction: column; }
     .destination__image > img {
       max-width: 45em; }
+    .destination__image {
+      align-self: center; }
     .destination__description {
       align-items: center; }
     .destination__name {
       align-self: center; }
     .destination__text {
-      text-align: center; } }
+      line-break: auto;
+      text-align: center; }
+    .destination__places > ul {
+      gap: 1.5vw; } }
 
 @media screen and (max-width: 53.125em) {
   html {
