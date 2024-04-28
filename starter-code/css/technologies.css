@@ -18,7 +18,7 @@ body {
   font-family: 'Barlow', sans-serif;
   font-weight: normal;
   color: #FFFFFF;
-  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-image: url("../public/assets/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -26,7 +26,7 @@ body {
   object-fit: contain;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../assets/technology/background-technology-desktop.jpg"); }
+  background-image: url("../public/assets/technology/background-technology-desktop.jpg"); }
 
 .header {
   display: flex;
@@ -279,7 +279,7 @@ main {
 
 @media screen and (max-width: 160em) {
   body {
-    background-image: url("../assets/technology/background-technology-desktop.jpg"); }
+    background-image: url("../public/assets/technology/background-technology-desktop.jpg"); }
   html {
     font-size: 75%; }
   .header {
@@ -309,7 +309,7 @@ main {
 
 @media screen and (max-width: 100em) {
   body {
-    background-image: url("../assets/technology/background-technology-desktop.jpg"); }
+    background-image: url("../public/assets/technology/background-technology-desktop.jpg"); }
   html {
     font-size: 55%; }
   .header {
@@ -335,21 +335,26 @@ main {
 
 @media screen and (max-width: 64em) {
   body {
-    background-image: url("../assets/technology/background-technology-tablet.jpg"); }
+    background-image: url("../public/assets/technology/background-technology-tablet.jpg"); }
   html {
-    font-size: 49.5%; }
+    font-size: 42%; }
   .header {
     margin-top: 1.1rem;
     margin-left: 1.5rem;
     margin-right: 0; }
     .header__line-container {
-      display: none; }
-    .header__logo-container {
-      min-width: 4.8em;
-      height: auto; }
+      display: none;
+      min-width: 10vw;
+      max-width: 25vw; }
     .header__menu-container {
-      justify-content: center;
-      margin-left: 5.5rem; }
+      margin-left: 10rem;
+      justify-content: center; }
+    .header__logo-container {
+      width: 7.5rem;
+      height: auto;
+      margin-right: 10.5rem; }
+    .header__hamburger-menu {
+      display: none; }
   main {
     margin-top: 5.5rem;
     gap: 5rem; }
@@ -379,7 +384,7 @@ main {
 
 @media screen and (max-width: 48em) {
   body {
-    background-image: url("../assets/technology/background-technology-tablet.jpg"); }
+    background-image: url("../public/assets/technology/background-technology-tablet.jpg"); }
   html {
     font-size: 38.25%; }
   .header {
@@ -426,7 +431,7 @@ main {
 
 @media screen and (max-width: 28.6em) {
   body {
-    background-image: url("../assets/technology/background-technology-mobile.jpg");
+    background-image: url("../public/assets/technology/background-technology-mobile.jpg");
     background-size: cover; }
   html {
     font-size: 31.25%; }

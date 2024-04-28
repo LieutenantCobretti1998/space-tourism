@@ -12,7 +12,6 @@
     margin-top: 1.1rem;
     margin-left: 1.5rem;
     margin-right: 0;
-    margin-bottom: 1.5vw;
 
     &__line-container {
       //left: 7rem;
@@ -30,11 +29,6 @@
       height: auto;
       margin-right: 10.5rem;
     }
-
-    .menu-overlay {
-      display: none;
-    }
-
     &__hamburger-menu {
       display: none;
     }
@@ -50,7 +44,6 @@
     margin-top: 1.1rem;
     margin-left: 1.5rem;
     margin-right: 0;
-    margin-bottom: 1.5vw;
 
     &__line-container {
       //left: 7rem;
@@ -68,11 +61,6 @@
       height: auto;
       margin-right: 10.5rem;
     }
-
-    .menu-overlay {
-      display: none;
-    }
-
     &__hamburger-menu {
       display: none;
     }
@@ -82,26 +70,30 @@
     min-width: 45vw !important;
     height: 60vh !important;
   }
+
+  .meet_crew {
+    margin-bottom: 2vw;
+  }
 }
 
 
 // Medium Laptops
 @media screen and (max-width: 100em) {
-  //body {
-  //  background-image: url("../assets/crew/background-crew-desktop.jpg");
-  //}
+  body {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
 
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 
   .header {
     margin-top: 1.1rem;
     margin-left: 1.5rem;
     margin-right: 0;
-    margin-bottom: 4.5vw;
 
     &__line-container {
+      //left: 7rem;
       min-width: 10vw;
       max-width: 25vw;
     }
@@ -116,11 +108,6 @@
       height: auto;
       margin-right: 10.5rem;
     }
-
-    .menu-overlay {
-      display: none;
-    }
-
     &__hamburger-menu {
       display: none;
     }
@@ -135,36 +122,37 @@
   // Medium Tablets and small laptops in portrait
   @media screen and (max-width: 64em) and (orientation: portrait) {
     html {
+      min-height: 100vh;
       font-size: 42%;
     }
 
     body {
       background-image: url("../assets/crew/background-crew-tablet.jpg");
+
     }
 
     .header {
       margin-top: 1.1rem;
-      justify-content: space-between;
-      margin-left: 1.3rem;
-      margin-bottom: 10rem;
+      margin-left: 1.5rem;
+      margin-right: 0;
 
-      &__logo-container {
-        min-width: 6.8em;
-        height: auto;
+      &__line-container {
+        display: none;
+        //left: 7rem;
+        min-width: 10vw;
+        max-width: 25vw;
       }
 
       &__menu-container {
-        margin-left: 35vw;
+        margin-left: 10rem;
+        justify-content: center;
       }
 
-      &__line-container {
-        display: block;
+      &__logo-container {
+        width: 7.5rem;
+        height: auto;
+        margin-right: 10.5rem;
       }
-
-      .menu-overlay {
-        display: none;
-      }
-
       &__hamburger-menu {
         display: none;
       }
@@ -209,41 +197,44 @@
   @media screen and (max-width: 64em) and (orientation: landscape) {
 
     html {
+      min-height: 100vh;
       font-size: 42%;
     }
 
     body {
       background-image: url("../assets/crew/background-crew-tablet.jpg");
+
     }
 
     .header {
       margin-top: 1.1rem;
-      justify-content: space-between;
-      margin-left: 1.3rem;
-      margin-bottom: 2.5rem;
-
-      &__logo-container {
-        min-width: 6.8em;
-        height: auto;
-      }
-
-      &__menu-container {
-        margin-left: 35vw;
-      }
+      margin-left: 1.5rem;
+      margin-right: 0;
 
       &__line-container {
         display: none;
+        //left: 7rem;
+        min-width: 10vw;
+        max-width: 25vw;
       }
 
-      .menu-overlay {
-        display: none;
+      &__menu-container {
+        margin-left: 10rem;
+        justify-content: center;
       }
 
+      &__logo-container {
+        width: 7.5rem;
+        height: auto;
+        margin-right: 10.5rem;
+      }
       &__hamburger-menu {
         display: none;
       }
     }
-
+    .meet_crew {
+      margin-bottom: 7vw;
+    }
   }
 
   // Tablets in landscape
@@ -254,31 +245,31 @@
 
     body {
       background-image: url("../assets/crew/background-crew-tablet.jpg");
+      background-size: auto;
     }
 
     .header {
       margin-top: 1.1rem;
-      justify-content: space-between;
-      margin-left: 1.3rem;
-      margin-bottom: 2.5rem;
-
-      &__logo-container {
-        min-width: 6.8em;
-        height: auto;
-      }
-
-      &__menu-container {
-        margin-left: 5.5rem;
-      }
+      margin-left: 1.5rem;
+      margin-right: 0;
 
       &__line-container {
         display: none;
+        //left: 7rem;
+        min-width: 10vw;
+        max-width: 25vw;
       }
 
-      .menu-overlay {
-        display: none;
+      &__menu-container {
+        margin-left: 10rem;
+        justify-content: center;
       }
 
+      &__logo-container {
+        width: 7.5rem;
+        height: auto;
+        margin-right: 10.5rem;
+      }
       &__hamburger-menu {
         display: none;
       }
@@ -327,31 +318,31 @@
 
     body {
       background-image: url("../assets/crew/background-crew-tablet.jpg");
-    }
+      background-size: auto;
+   }
 
     .header {
       margin-top: 1.1rem;
-      justify-content: space-between;
-      margin-left: 1.3rem;
-      margin-bottom: 10rem;
-
-      &__logo-container {
-        min-width: 6.8em;
-        height: auto;
-      }
-
-      &__menu-container {
-        margin-left: 5.5rem;
-      }
+      margin-left: 1.5rem;
+      margin-right: 0;
 
       &__line-container {
         display: none;
+        //left: 7rem;
+        min-width: 10vw;
+        max-width: 25vw;
       }
 
-      .menu-overlay {
-        display: none;
+      &__menu-container {
+        margin-left: 10rem;
+        justify-content: center;
       }
 
+      &__logo-container {
+        width: 7.5rem;
+        height: auto;
+        margin-right: 10.5rem;
+      }
       &__hamburger-menu {
         display: none;
       }

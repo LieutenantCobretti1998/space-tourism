@@ -65,6 +65,7 @@
 @media screen and (max-width: 160em) {
   body {
     background-image: url("../assets/destination/background-destination-desktop.jpg");
+
   }
 
   html {
@@ -131,7 +132,7 @@
   }
 
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 
   .header {
@@ -182,9 +183,16 @@
   }
 }
 
+//@media screen and (max-width: 64em) and (orientation: portrait) {
+//  body {
+//    background-size: auto;
+//  }
+//}
+
 // Big Tablets
 @media screen and (max-width: 64em) {
   html {
+    min-height: 100vh;
     font-size: 42%;
   }
 

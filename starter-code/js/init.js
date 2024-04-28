@@ -7,20 +7,22 @@ class DataFetcher {
     url
     constructor(json_url) {
         this.url = json_url;
-        console.log(this.fetchData())
+        console.log(this.fetchData());
     }
     
     async fetchData() {
         try {
-            const response = await fetch(this.url)
+            const response = await fetch(this.url);
+            console.log(response);
+            console.log(response.headers.get('Content-Type'));
             if (!response.ok) {
                 console.error((`Error occurred: ${response.status}`));
             }
-            
+
             return await response.json();
         }
         catch (e) {
-            console.error(e)
+            console.error(e);
         }
     }
 }
@@ -35,7 +37,7 @@ export default class PageHandler extends DataFetcher {
     
     async findDestination(data, destination) {
         for(const dest in data.destinations) {
-            console.log(dest)
+            console.log(dest);
             let name = data.destinations[dest].name;
             if (name === destination) {
                 return data.destinations[dest];

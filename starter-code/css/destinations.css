@@ -18,7 +18,7 @@ body {
   font-family: 'Barlow', sans-serif;
   font-weight: normal;
   color: #FFFFFF;
-  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-image: url("../public/assets/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -151,7 +151,7 @@ body {
 
 body {
   object-fit: cover;
-  background-image: url("../assets/destination/background-destination-desktop.jpg"); }
+  background-image: url("../public/assets/destination/background-destination-desktop.jpg"); }
 
 main {
   position: relative; }
@@ -316,7 +316,7 @@ main {
 
 @media screen and (min-width: 160.1em) {
   body {
-    background-image: url("../assets/destination/background-destination-desktop.jpg"); }
+    background-image: url("../public/assets/destination/background-destination-desktop.jpg"); }
   html {
     font-size: 125%; }
   .header {
@@ -353,7 +353,7 @@ main {
 
 @media screen and (max-width: 160em) {
   body {
-    background-image: url("../assets/destination/background-destination-desktop.jpg"); }
+    background-image: url("../public/assets/destination/background-destination-desktop.jpg"); }
   html {
     font-size: 75%; }
   .header {
@@ -390,9 +390,9 @@ main {
 
 @media screen and (max-width: 100em) {
   body {
-    background-image: url("../assets/destination/background-destination-desktop.jpg"); }
+    background-image: url("../public/assets/destination/background-destination-desktop.jpg"); }
   html {
-    font-size: 50%; }
+    font-size: 55%; }
   .header {
     margin-top: 1.1rem;
     margin-left: 1.5rem;
@@ -424,9 +424,10 @@ main {
 
 @media screen and (max-width: 64em) {
   html {
+    min-height: 100vh;
     font-size: 42%; }
   body {
-    background-image: url("../assets/destination/background-destination-tablet.jpg"); }
+    background-image: url("../public/assets/destination/background-destination-tablet.jpg"); }
   .header {
     margin-top: 1.1rem;
     justify-content: space-between;
@@ -473,7 +474,7 @@ main {
   html {
     font-size: 38.25%; }
   body {
-    background-image: url("../assets/destination/background-destination-tablet.jpg"); }
+    background-image: url("../public/assets/destination/background-destination-tablet.jpg"); }
   .header {
     margin-top: 1.1rem;
     justify-content: space-between;
@@ -515,7 +516,7 @@ main {
   html {
     font-size: 31.25%; }
   body {
-    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    background-image: url("../public/assets/destination/background-destination-mobile.jpg");
     background-size: cover; }
   .header {
     margin-top: 1.1rem;

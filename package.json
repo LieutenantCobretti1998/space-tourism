@@ -5,9 +5,8 @@
   },
   "type": "module",
   "name": "space-tourism-website-main",
-  "description": "![Design preview for the Space tourism website coding challenge](./preview.jpg)",
+  "description": "Portfolio Project",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
     "animejs": "^3.2.2",
     "anymatch": "^3.1.3",

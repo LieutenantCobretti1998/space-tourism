@@ -38,7 +38,7 @@ nav_element.addEventListener("click", async (e)=> {
         element.classList.remove("active-destination");
     })
 
-    stopDestinationsClicking("none", "default");
+    stopDestinationsClicking("none", "default", ".destination__places_place");
 
     if (e.target.classList.contains("destination__places_place")) {
         const destination_name = e.target.textContent.trim();

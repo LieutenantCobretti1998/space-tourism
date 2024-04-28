@@ -1,6 +1,6 @@
 import PageHandler from "./init.js";
 import anime from "../../node_modules/animejs/lib/anime.es.js";
-import { DynamicImage, HamburgerMenu } from "./helpers.js";
+import {DynamicImage, HamburgerMenu, stopDestinationsClicking} from "./helpers.js";
 // Main animation init
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         easing: "easeOutElastic(1, .8)"
     });
 
-
 })
 
 
@@ -27,11 +26,11 @@ technologies_numbers_element.addEventListener("click", async (e) => {
     document.querySelectorAll(".filled").forEach(element => {
         element.classList.remove("filled");
     })
-
+    stopDestinationsClicking("none", "default", ".technologies_container__numbers__number");
     if(e.target.classList.contains("technologies_container__numbers__number")) {
         e.target.classList.add("filled");
         const number = Number(e.target.textContent) - 1;
-        const pageHandler = new PageHandler("./data.json", "technologies");
+        const pageHandler = new PageHandler("/data.json", "technologies");
         await pageHandler.initTechnologies(number);
     }
 });

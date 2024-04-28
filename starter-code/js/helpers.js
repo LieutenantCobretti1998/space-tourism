@@ -1,5 +1,5 @@
-export function stopDestinationsClicking(pointer, cursor) {
-    document.querySelectorAll(".destination__places_place").forEach(element => {
+export function stopDestinationsClicking(pointer, cursor, cls) {
+    document.querySelectorAll(cls).forEach(element => {
         element.style.pointerEvents = pointer;
         element.style.cursor = cursor;
     });

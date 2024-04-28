@@ -117,7 +117,7 @@ export default class TreeCreator {
         this.#time_element.addEventListener("animationend", handle_animation_end);
         this.#destination_text_name_element.addEventListener("animationend", handle_animation_end);
         setTimeout(() => {
-            stopDestinationsClicking("", "pointer");
+            stopDestinationsClicking("", "pointer", ".destination__places_place");
         }, 3500);
     };
 
@@ -141,7 +141,9 @@ export default class TreeCreator {
 
                 this.#technologies_text_element = document.querySelector(".technologies_container__description__text");
                 this.#technologies_text_element.textContent = this.#destination_text;
-
+                setTimeout(() => {
+                    stopDestinationsClicking("", "pointer", ".technologies_container__numbers__number");
+                }, 1000);
                 // Ensure elements are ready for the next animation
                 anime({
                     targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
@@ -186,6 +188,9 @@ export default class TreeCreator {
                 console.log(this.#destination_image)
                 image_element.src = this.#destination_image;
                 image_element.alt = this.#destination_name;
+                setTimeout(() => {
+                    stopDestinationsClicking("", "pointer", ".dot");
+                }, 500);
 
                 // Ensure elements are ready for the next animation
                 anime({

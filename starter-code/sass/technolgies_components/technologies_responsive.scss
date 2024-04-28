@@ -154,7 +154,7 @@
   }
 
   html {
-    font-size: 49.5%;
+    font-size: 42%;
   }
 
   .header {
@@ -164,16 +164,23 @@
 
     &__line-container {
       display: none;
-    }
-
-    &__logo-container {
-      min-width: 4.8em;
-      height: auto;
+      //left: 7rem;
+      min-width: 10vw;
+      max-width: 25vw;
     }
 
     &__menu-container {
+      margin-left: 10rem;
       justify-content: center;
-      margin-left: 5.5rem;
+    }
+
+    &__logo-container {
+      width: 7.5rem;
+      height: auto;
+      margin-right: 10.5rem;
+    }
+    &__hamburger-menu {
+      display: none;
     }
 
 

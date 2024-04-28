@@ -1,6 +1,6 @@
 import PageHandler from "./init.js";
 import anime from "../../node_modules/animejs/lib/anime.es.js";
-import {HamburgerMenu} from "./helpers.js";
+import {HamburgerMenu, stopDestinationsClicking} from "./helpers.js";
 
 // Main animation init
 
@@ -28,11 +28,12 @@ dots.forEach((dot, index) => {
     dot.addEventListener("click", async () => {
         dots.forEach(d => d.classList.remove('active'));
         dot.classList.add('active');
-        
+
+        stopDestinationsClicking("none", "default", ".dot");
+
         if(dot.classList.contains('dot')) {
             const pageHandler = new PageHandler("./data.json", "crew");
             await pageHandler.initCrew(index);
-            
         }
     })
 })
