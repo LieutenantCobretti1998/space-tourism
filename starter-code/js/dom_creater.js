@@ -39,7 +39,6 @@ export default class TreeCreator {
                 this.updateDomTreeTechnologies();
                 break;
             case "crew":
-                console.log("TEST");
                 this.updateDomTreeCrew();
                 break;
         }
@@ -122,40 +121,42 @@ export default class TreeCreator {
     };
 
     updateDomTreeTechnologies() {
+        const newImage = new Image();
+        newImage.onload = () => {
+            anime({
+                targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
+                keyframes: [
+                    { translateY: -75, opacity: [1, 0] }
+                ],
+                duration: 2000,
+                easing: "easeOutElastic(1, .8)",
+                complete: () => {
+                    console.log(this.#destination_name);
+                    this.#technologies_name_element = document.querySelector(".technologies_container__description__name");
+                    this.#technologies_name_element.textContent = this.#destination_name;
 
-        anime({
-            targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
-            keyframes: [
-                { translateY: -75, opacity: [1, 0] }
-            ],
-            duration: 2000,
-            easing: "easeOutElastic(1, .8)",
-            complete: () => {
-                console.log(this.#destination_name);
-                this.#technologies_name_element = document.querySelector(".technologies_container__description__name");
-                this.#technologies_name_element.textContent = this.#destination_name;
+                    this.#technologies_image_element = document.querySelector(".technologies_container__image img");
+                    this.#technologies_image_element.src = this.#destination_image;
+                    this.#technologies_image_element.alt = this.#destination_name;
 
-                this.#technologies_image_element = document.querySelector(".technologies_container__image img");
-                this.#technologies_image_element.src = this.#destination_image;
-                this.#technologies_image_element.alt = this.#destination_name;
-
-                this.#technologies_text_element = document.querySelector(".technologies_container__description__text");
-                this.#technologies_text_element.textContent = this.#destination_text;
-                setTimeout(() => {
-                    stopDestinationsClicking("", "pointer", ".technologies_container__numbers__number");
-                }, 1000);
-                // Ensure elements are ready for the next animation
-                anime({
-                    targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
-                    keyframes: [
-                        { translateY: [75, 0], opacity: [0, 1] }
-                    ],
-                    duration: 2000,
-                    easing: "easeOutElastic(1, .8)"
-                });
-            }
-        });
-
+                    this.#technologies_text_element = document.querySelector(".technologies_container__description__text");
+                    this.#technologies_text_element.textContent = this.#destination_text;
+                    setTimeout(() => {
+                        stopDestinationsClicking("", "pointer", ".technologies_container__numbers__number");
+                    }, 1000);
+                    // Ensure elements are ready for the next animation
+                    anime({
+                        targets: ".technologies_container__description__name, .technologies_container__description__text, .technologies_container__image img",
+                        keyframes: [
+                            { translateY: [75, 0], opacity: [0, 1] }
+                        ],
+                        duration: 2000,
+                        easing: "easeOutElastic(1, .8)"
+                    });
+                }
+            });
+        }
+        newImage.src = this.#destination_image;
         document.querySelectorAll(".technologies_container__numbers__number").forEach(element => {
             let number = this.index + 1;
             if (number === Number(element.textContent)) {
@@ -165,54 +166,60 @@ export default class TreeCreator {
     }
 
     updateDomTreeCrew() {
-        anime({
-            targets: ".crew_information__profession, .crew_information__text, .crew_information__name, .crew-image",
-            keyframes: [
-                { translateY: -75, opacity: [1, 0] }
-            ],
-            duration: 2000,
-            easing: "easeOutElastic(1, .8)",
-            complete: () => {
-                const profession_element = document.querySelector(".crew_information__profession");
-                console.log(profession_element);
-                console.log(this.#role)
-                profession_element.textContent = this.#role;
+        // First, prepare the new image and define what to do when it loads
+        const newImage = new Image();
+        newImage.onload = () => {
+            // The new image is now loaded and ready to be displayed
+            // Begin the animation to fade out current content
+            anime({
+                targets: ".crew_information__profession, .crew_information__text, .crew_information__name, .crew-image",
+                keyframes: [
+                    { translateY: -75, opacity: [1, 0] }
+                ],
+                duration: 2000,
+                easing: "easeOutElastic(1, .8)",
+                complete: () => {
+                    // Now that the content is faded out, update text contents
+                    const profession_element = document.querySelector(".crew_information__profession");
+                    profession_element.textContent = this.#role;
 
-                const crew_name_element = document.querySelector(".crew_information__name");
-                crew_name_element.textContent = this.#destination_name;
-                console.log(this.#destination_name);
-                const description_element = document.querySelector(".crew_information__text");
-                description_element.textContent = this.#destination_text;
+                    const crew_name_element = document.querySelector(".crew_information__name");
+                    crew_name_element.textContent = this.#destination_name;
 
-                const image_element = document.querySelector(".crew-image");
-                console.log(this.#destination_image)
-                image_element.src = this.#destination_image;
-                image_element.alt = this.#destination_name;
-                setTimeout(() => {
-                    stopDestinationsClicking("", "pointer", ".dot");
-                }, 500);
+                    const description_element = document.querySelector(".crew_information__text");
+                    description_element.textContent = this.#destination_text;
 
-                // Ensure elements are ready for the next animation
-                anime({
-                    targets: ".crew_information__profession, .crew_information__text, .crew_information__name",
-                    keyframes: [
-                        { translateY: [75, -10], opacity: [0, 1] }
-                    ],
-                    duration: 2000,
-                    easing: "easeOutElastic(1, .8)"
-                });
+                    // Update the image with the new image that has been preloaded
+                    const image_element = document.querySelector(".crew-image");
+                    image_element.src = newImage.src; // Use the preloaded image's src
+                    image_element.alt = this.#destination_name;
 
-                anime({
-                    targets: ".crew-image",
-                    keyframes: [
-                        { translateY: [75, -10], opacity: [0, 1] }
-                    ],
-                    duration: 2000,
-                    easing: "easeOutElastic(1, .8)"
-                })
-            }
-        });
+                    setTimeout(() => {
+                        stopDestinationsClicking("", "pointer", ".dot");
+                    }, 1000);
 
+                    anime({
+                        targets: ".crew_information__profession, .crew_information__text, .crew_information__name",
+                        keyframes: [
+                            { translateY: [75, -10], opacity: [0, 1] }
+                        ],
+                        duration: 2000,
+                        easing: "easeOutElastic(1, .8)"
+                    });
+
+                    anime({
+                        targets: ".crew-image",
+                        keyframes: [
+                            { translateY: [75, -10], opacity: [0, 1] }
+                        ],
+                        duration: 2000,
+                        easing: "easeOutElastic(1, .8)"
+                    })
+                }
+            });
+        };
+        // Set the src of the new image, which will start loading it
+        newImage.src = this.#destination_image;
     }
 }
 

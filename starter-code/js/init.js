@@ -7,14 +7,11 @@ class DataFetcher {
     url
     constructor(json_url) {
         this.url = json_url;
-        console.log(this.fetchData());
     }
     
     async fetchData() {
         try {
             const response = await fetch(this.url);
-            console.log(response);
-            console.log(response.headers.get('Content-Type'));
             if (!response.ok) {
                 console.error((`Error occurred: ${response.status}`));
             }
@@ -37,7 +34,6 @@ export default class PageHandler extends DataFetcher {
     
     async findDestination(data, destination) {
         for(const dest in data.destinations) {
-            console.log(dest);
             let name = data.destinations[dest].name;
             if (name === destination) {
                 return data.destinations[dest];
@@ -50,7 +46,6 @@ export default class PageHandler extends DataFetcher {
             const data = await this.fetchData();
             if (data) {
                 const destination = await this.findDestination(data, destinationName)
-                console.log(destination);
                 // Assuming destinations[4] might not exist, which will cause an error
                 this.defaultDestination(destination);
             }
@@ -82,7 +77,6 @@ export default class PageHandler extends DataFetcher {
             const data = await this.fetchData();
             if(data && data.crew && data.crew[crew_index] !== undefined) {
                 const crew = await data.crew[crew_index];
-                console.log(crew);
                 this.defaultCrew(crew);
             }
         }
@@ -130,7 +124,6 @@ export default class PageHandler extends DataFetcher {
             })
         }
     }
-    
 }
 
 

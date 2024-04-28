@@ -25,7 +25,6 @@ export  function DynamicImage() {
 export function HamburgerMenu() {
     const close_button_element = document.querySelector(".close_button");
     close_button_element.addEventListener("click", () => {
-        console.log(1)
         const menu_overlay_element = document.querySelector(".menu-overlay");
         menu_overlay_element.classList.add("closing_menu");
         menu_overlay_element.addEventListener('animationend', () => {
